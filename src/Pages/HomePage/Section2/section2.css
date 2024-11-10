@@ -1,0 +1,31 @@
+.sct2 {
+    background-color: #F7F7F7;
+    background-size: cover;
+    background-position: center ;
+    background-image: url("https://livedemo00.template-help.com/wt_prod-25548/unit-car-repair/images/bg-image-1.jpg");
+}
+
+
+.boxes-container::-webkit-scrollbar {
+    width: 6px; 
+  }
+  
+ 
+  .boxes-container::-webkit-scrollbar-track {
+   
+    background: #f1f1f1;
+    border-radius: 6px; 
+  }
+  
+ 
+  .boxes-container::-webkit-scrollbar-thumb {
+    
+    background-color: #b7b6b6;   
+    border-radius: 6px; 
+  }
+  
+ 
+  .boxes-container::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  

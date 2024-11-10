@@ -1,0 +1,27 @@
+.sct1 {
+    position: relative;
+    height: 100%;
+   width: 100%;
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.swiper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: -42px;
+}
+
+.swiper-slide {
+    text-align: center;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
