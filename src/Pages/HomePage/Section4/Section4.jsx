@@ -50,6 +50,9 @@ const Section4 = () => {
                 <Card />
                 <Card />
                 <Card />
+                <Card />
+                <Card />
+                <Card />
               </>
             )}
 
@@ -66,6 +69,9 @@ const Section4 = () => {
 
             {active === "otherParts" && (
               <>
+                <Card />
+                <Card />
+                <Card />
                 <Card />
                 <Card />
                 <Card />
