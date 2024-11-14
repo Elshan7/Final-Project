@@ -1,0 +1,41 @@
+#signup .left-side {
+      background-image: url(https://colorlib.com/etc/lf/Login_v13/images/bg-01.jpg);
+  }
+  
+  
+  #signup .input-group2 {
+      width: 420px;
+      height: 80px;
+  }
+  
+  #signup .label2 {
+      width: 93px;
+      height: 25px;
+      font-family: Poppins-SemiBold;
+      font-size: 18px;
+      color: #999999;
+      line-height: 1.2;
+      padding-left: 2px;
+      font-weight: 600;
+  }
+  
+  #signup .input2 {
+      width: 420px;
+      height: 50px;
+      background: transparent;
+      font-family: Poppins-Regular;
+      font-size: 22px;
+      color: #b4b4b4;
+      line-height: 1.2;
+      padding: 0 2px;
+      outline: none;
+      border: none;
+      border-bottom: 2px solid #DBDBDB;
+  }
+  
+
+  #signup .input-error {
+      color: red;
+      font-size: 14px;
+      margin-top: 4px;
+  }

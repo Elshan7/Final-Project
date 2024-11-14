@@ -1,0 +1,27 @@
+.login-sct {
+  background-image: url(https://wallpapers.com/images/hd/plain-black-with-wooden-pattern-09v7n22juf06luep.jpg);
+}
+
+#login .container {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#login label , #login input , #login .forgot a , #login .text1 {
+  font-family: Poppins-Regular;
+}
+
+#login .icons a {
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#login .icons a:hover {
+  background-color: black;
+  transition: 1s;
+}

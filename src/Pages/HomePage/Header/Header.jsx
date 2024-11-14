@@ -5,8 +5,14 @@ import { MdLocalPhone } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { PiShoppingCartBold } from "react-icons/pi";
+import { useNavigate } from 'react-router-dom';
+
 
 const Header = () => {
+
+  const navigate = useNavigate();
+
+
   return (
     <header className='w-full h-[230px] bg-[#FFFFFF] flex flex-col items-center relative '>
 
@@ -55,7 +61,7 @@ const Header = () => {
      <div className="header-down w-[80%] h-[64px] bg-[#343434]">
       <nav className='flex justify-between items-center'>
         <ul className='flex justify-around items-center w-[555px] h-[64px] text-[white] '>
-          <li><a className='tracking-wider text-[#4675FF]' href="">HOME</a></li>
+          <li><a className='tracking-wider text-[#4675FF]' onClick={() => navigate("/")} href="">HOME</a></li>
           <li><a className='tracking-wider duration-500 hover:text-[#4675FF]' href="">PAGES</a></li>
           <li><a className='tracking-wider duration-500 hover:text-[#4675FF]' href="">SHOP</a></li>
           <li><a className='tracking-wider duration-500 hover:text-[#4675FF]' href="">GALLERY</a></li>
@@ -63,7 +69,7 @@ const Header = () => {
         </ul>
 
         <div className="icons w-[130px] h-[64px]  flex items-center justify-around text-[white] ">
-        <FaRegUser className='text-[22px] hover:cursor-pointer ' />
+        <FaRegUser onClick={() => navigate("/login")} className='text-[22px] hover:cursor-pointer ' />
         <IoSearch className='text-[22px] hover:cursor-pointer' />
         <PiShoppingCartBold className='text-[22px] hover:cursor-pointer'/>
 

@@ -22,8 +22,8 @@ const Footer = () => {
 
                     <ul className='w-full h-[128px] flex flex-col mt-5 '>
 
-                        <li className='h-[58px] w-[70%]  flex items-center'>
-                        <IoLocationSharp className='location w-[40px] h-[40px]' />
+                        <li className='h-[58px] w-[70%]  flex items-center '>
+                        <IoLocationSharp className='location w-[40px] h-[40px] ' />
                         <a className='w-[225px] h-[48px]  ml-1 text-[#FFFFFF]'  href="">523 Sylvan Ave, 5th Floor <br />Mountain View, CA 94041 USA</a>
                         </li>
 
@@ -103,9 +103,9 @@ const Footer = () => {
                 <a className='footer-icon w-[32px] h-[32px] rounded-full border-solid border flex justify-center items-center' href=""><FaSkype /></a>
                 
                 </div>
-                <div className="down-part3 w-[33.3%] h-[78px] ">
-                    <p className='part3-text'>© 2024 Unit.  All rights reserved.</p>
-                    <p className='part3-text'>Privacy Policy</p>
+                <div className="down-part3 w-[33.3%] h-[78px] flex justify-end items-center  ">
+                    <p className='part3-text  '>© 2024 Unit.  All rights reserved.</p> <br />
+                    {/* <p className='part3-text  '>Privacy Policy</p> */}
                 </div>
 
             </div>
