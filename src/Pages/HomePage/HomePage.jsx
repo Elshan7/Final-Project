@@ -1,3 +1,5 @@
+
+import { useParams } from 'react-router-dom'
 import Footer from './Footer/Footer'
 import Header from './Header/Header'
 import Section1 from './Section1/Section1'
@@ -9,9 +11,12 @@ import Section6 from './Section6/Section6'
 
 
 const HomePage = () => {
+
+  const { id } = useParams();
+  console.log(id);
+
   return (
     <>
-
     <Header/>
     <Section1/>
     <Section2/>

@@ -1,40 +1,39 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Login.css';
 import { FaRegUser, FaFacebookF, FaTwitter, FaGoogle } from "react-icons/fa6";
 import { MdOutlineLock } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import Footer from '../../Pages/HomePage/Footer/Footer';
 import Header from '../../Pages/HomePage/Header/Header';
+import { useDispatch, useSelector } from 'react-redux';
+import { loginUser } from '../../Redux/feature/login/loginSlice';
 
 
 const Login = () => {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
+    
+
+    const { loading, error, userInfo } = useSelector((state) => state.login);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        dispatch(loginUser({ username, password })); 
+    };
 
 
-    const checkApi = async () => {
-        const res = await axios.get("https://66ffcd724da5bd237552095c.mockapi.io/users");
-        const users = res.data;
-
-        const user = users.find(user => user.username === username && user.password === password);
-
-        if (user) {
-            navigate(`/welcome/${user.id}`);
-        } else {
-            setError('Invalid username or password');
+    useEffect(() => {
+        if (userInfo) {
+          navigate(`/${userInfo.id}`);  
         }
-};
+      }, [userInfo, navigate]);
+      
+    
 
-
-const handleSubmit = (e) => {
-    e.preventDefault(); 
-    checkApi(); 
-};
 
 
     return (
@@ -80,12 +79,14 @@ const handleSubmit = (e) => {
                         </div>
                     </div>
 
+                    {error && <p className="input-error text-red-600 mt-3 ">{error}</p>} 
+
                     <div className=" forgot w-[390px] h-[50px] flex justify-end">
                         <a className='pt-3 text-[14px] text-[#666666] duration-1000 hover:text-[#007bff]' href=''>Forgot password?</a>
                     </div>
 
-                    <button className='w-[390px] h-[50px] bg-slate-400 rounded-3xl text-white text-[16px] border-none cursor-pointer'>
-                        LOGIN
+                    <button disabled={loading} className='w-[390px] h-[50px] bg-slate-400 rounded-3xl text-white text-[16px] border-none cursor-pointer'>
+                    {loading ? 'Logging in...' : 'LOGIN'}
                         </button>
                     <div className="text1 w-[390px] h-[50px] text-[#666666] flex justify-center items-end text-[14px]">Or Sign Up Using</div>
                     <div className="icons w-[390px] h-[50px] flex justify-center items-center gap-3 mt-4 ">
