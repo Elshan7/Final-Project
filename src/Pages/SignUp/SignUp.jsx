@@ -4,8 +4,8 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 import { signUpSchema } from "../../assets/schema/signUpSchema";
-import Footer from "../../Pages/HomePage/Footer/Footer";
-import Header from "../../Pages/HomePage/Header/Header";
+import Footer from "../HomePage/Footer/Footer";
+import Header from "../HomePage/Header/Header";
 import { useDispatch, useSelector } from "react-redux";
 import { signUpUser } from "../../Redux/feature/user/userSlice";
 

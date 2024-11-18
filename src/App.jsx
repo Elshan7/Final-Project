@@ -1,8 +1,9 @@
-import React from "react";
 import HomePage from "./Pages/HomePage/HomePage";
-import Login from "./components/Login/Login";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import SignUp from "./components/SignUp/SignUp";
+import AddToChart from "./Pages/AddToChart/AddToChart";
+import Favorite from "./Pages/Favorite/Favorite";
+import SignUp from "./Pages/SignUp/SignUp";
+import Login from "./Pages/Login/Login";
 
 const App = () => {
   return (
@@ -13,6 +14,8 @@ const App = () => {
           <Route path="/:id" element={<HomePage />} /> 
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/signUp" element={<SignUp />} />
+          <Route exact path="/basket" element={<AddToChart />} />
+          <Route exact path="/favorite" element={<Favorite />} />
         </Routes>
       </BrowserRouter>
     </>

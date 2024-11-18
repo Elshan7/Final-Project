@@ -6,6 +6,7 @@ import { FaRegUser } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { PiShoppingCartBold } from "react-icons/pi";
 import { useNavigate } from 'react-router-dom';
+import { MdFavoriteBorder } from "react-icons/md";
 
 
 const Header = () => {
@@ -68,10 +69,11 @@ const Header = () => {
           <li><a className='tracking-wider duration-500 hover:text-[#4675FF]' href="">CONTACT US</a></li>
         </ul>
 
-        <div className="icons w-[130px] h-[64px]  flex items-center justify-around text-[white] ">
+        <div className="icons w-[170px] h-[64px]  flex items-center justify-evenly text-[white] ">
         <FaRegUser onClick={() => navigate("/login")} className='text-[22px] hover:cursor-pointer ' />
+        <MdFavoriteBorder onClick={() => navigate("/favorite")} className='text-[22px] hover:cursor-pointer'/>
         <IoSearch className='text-[22px] hover:cursor-pointer' />
-        <PiShoppingCartBold className='text-[22px] hover:cursor-pointer'/>
+        <PiShoppingCartBold onClick={() => navigate("/basket")} className='text-[22px] hover:cursor-pointer'/>
 
         </div>
       </nav>

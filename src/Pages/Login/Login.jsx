@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import './Login.css';
 import { FaRegUser, FaFacebookF, FaTwitter, FaGoogle } from "react-icons/fa6";
 import { MdOutlineLock } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
-import Footer from '../../Pages/HomePage/Footer/Footer';
-import Header from '../../Pages/HomePage/Header/Header';
+import Footer from '../HomePage/Footer/Footer';
+import Header from '../HomePage/Header/Header';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginUser } from '../../Redux/feature/login/loginSlice';
 
