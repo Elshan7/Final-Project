@@ -26,13 +26,13 @@ const Section4 = () => {
 
         <div className="sct4-container w-full h-[1130px]  flex flex-col justify-between">
           <div className="sct4-headings w-full h-[45px]  flex justify-center items-center gap-5">
-            <button onClick={() => handleButtonClick("allProducts")} className="">All Products</button>
-            <button onClick={() => handleButtonClick("carLights")}>Car Lights</button>
-            <button onClick={() => handleButtonClick("wheels")}>Wheels</button>
-            <button onClick={() => handleButtonClick("otherParts")}>Other parts</button>
+            <button onClick={() => handleButtonClick("allProducts")} className="bg-slate-400 duration-700 p-2 rounded-lg hover:opacity-60">All Products</button>
+            <button onClick={() => handleButtonClick("carLights")}className="bg-slate-400 duration-700 p-2 rounded-lg hover:opacity-60">Car Lights</button>
+            <button onClick={() => handleButtonClick("wheels")} className="bg-slate-400 duration-700 p-2 rounded-lg hover:opacity-60">Wheels</button>
+            <button onClick={() => handleButtonClick("otherParts")} className="bg-slate-400 duration-700 p-2 rounded-lg hover:opacity-60">Other parts</button>
           </div>
 
-          <div className="sct4-cards w-full h-[1056px] flex flex-wrap justify-around items-center">
+          <div className="sct4-cards w-full h-[1056px] flex flex-wrap gap-6">
             {active === "allProducts" &&
               value.map((item) => <Card key={item.id} item={item} />)}
 

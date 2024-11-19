@@ -19,7 +19,7 @@ const AddToChart = () => {
   };
 
   const [quantities, setQuantities] = useState(
-    basketItems.map(() => 1) // Initialize quantities for each item
+    basketItems.map(() => 1) 
   );
 
   const handleIncrement = (index) => {
@@ -38,46 +38,56 @@ const AddToChart = () => {
     <>
       <Header />
 
-      {basketItems.length > 0 ? (
+    <section className='cart-sct my-3'>
+
+    <div className="basket-title w-full h-[40px]  flex justify-start bg-slate-300">
+
+                  <ul className="flex justify-around w-[70%] ">
+
+                    <li className="w-[300px]  flex justify-center items-center">
+                      <a href="">Product</a>
+                    </li>
+                    <li className="w-[200px]  flex justify-center items-center">
+                      <a href="">Short Description</a>
+                    </li>
+                    <li className="w-[100px]  flex justify-center items-center">
+                      <a href="">Price</a>
+                    </li>
+                    <li className=" flex justify-center items-center w-[100px] ">
+                      <a href="">Quantity</a>
+                    </li>
+                    <li className="flex justify-center items-center w-[100px]  ">
+                      <a href="">Total Price</a>
+                    </li>
+
+                  </ul>
+     </div>
+
+    {basketItems.length > 0 ? (
         basketItems.map((item, index) => (
           <div
             key={item.id}
-            className="basket w-full h-auto bg-slate-300 flex justify-center items-center"
+            className="basket w-full h-auto  flex justify-center items-center"
           >
-            <div className="basket-container w-[95%] h-[90%] bg-slate-400">
-              <div className="basket-content w-[70%] h-auto bg-slate-100 rounded-md ">
-                <div className="basket-title w-full h-[30px] bg-orange-200">
-                  <ul className="flex justify-between w-full">
-                    <li className="w-[45%] bg-red-400">
-                      <a href="">Product</a>
-                    </li>
-                    <li className="w-[90px]">
-                      <a href="">Price</a>
-                    </li>
-                    <li className="w-[100px]">
-                      <a href="">Quantity</a>
-                    </li>
-                    <li className="w-[100px] ">
-                      <a href="">Total Price</a>
-                    </li>
-                  </ul>
-                </div>
+            <div className="basket-container w-[95%] h-[90%]  flex my-1">
 
-                <div className="basket-detail w-full h-auto bg-lime-400 flex items-center justify-between">
-                  <div className="img-div w-[500px] h-[270px] bg-slate-500 flex items-center ">
+              <div className="basket-content w-[75%] h-auto  rounded-md ">
+
+                <div className="basket-detail w-full h-auto  flex items-center justify-between ">
+                  <div className="img-div w-[500px] h-[270px] flex items-center ">
                     <img
                       className="w-[320px] h-[270px] object-contain"
                       src={item.image}
                       alt=""
                     />
-                    <p>{item.title}</p>
+                    <p className=''>{item.title}</p>
                   </div>
 
-                  <div className="price w-[90px] h-[250px] bg-slate-400 flex items-center justify-center">
+                  <div className="price w-[90px] h-[250px]  flex items-center justify-center">
                     <span>${item.newPrice}</span>
                   </div>
 
-                  <div className="quantity w-[100px] h-[250px] bg-stone-400 flex items-center justify-center">
+                  <div className="quantity w-[100px] h-[250px]  flex items-center justify-center">
                     <button
                       onClick={() => handleDecrement(index)}
                       className="border w-5 h-5 flex items-center justify-center"
@@ -93,7 +103,7 @@ const AddToChart = () => {
                     </button>
                   </div>
 
-                  <div className="total-price w-[100px] h-[250px] bg-slate-300 flex justify-center items-center">
+                  <div className="total-price w-[100px] h-[250px]  flex justify-center items-center">
                     <span>
                       ${(item.newPrice * quantities[index]).toFixed(2)}
                     </span>
@@ -101,9 +111,10 @@ const AddToChart = () => {
 
                   <MdDelete
                     onClick={() => handleDeleteFromCart(item)}
-                    className="cursor-pointer"
+                    className="cursor-pointer duration-700 text-[25px] hover:text-red-500"
                   />
                 </div>
+
               </div>
             </div>
           </div>
@@ -112,10 +123,15 @@ const AddToChart = () => {
         <p>No items in the cart.</p>
       )}
 
+
+
+    </section>
+
       <Footer/>
     </>
   );
 };
+
 
 export default AddToChart;
 

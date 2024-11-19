@@ -39,6 +39,8 @@ const SignUp = () => {
     }
   }, [userInfo, navigate]);
 
+
+
   return (
     <>
       <Header />
