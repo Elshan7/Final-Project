@@ -20,3 +20,44 @@
     border-radius: 5px;
     z-index: 999;
 }
+  
+  .sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    border-radius: 0;
+  }
+
+  .menu-item {
+    position: relative;
+  }
+  
+  
+  .menu-item:hover .submenu {
+    display: block;
+    min-width: 180px;
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 19px;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .submenu li {
+    padding: 8px 12px;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: "Montserrat";
+  }
+  
+  .submenu li:hover {
+    background-color: #f4f4f4;
+  }
+  
+
+  
+  
+  
