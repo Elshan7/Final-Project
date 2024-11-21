@@ -26,8 +26,7 @@ const Header = () => {
     dispatch(setActiveItem(null));
   };
 
-
-  const [scroll,setScroll] = useState(false);
+  const [scroll, setScroll] = useState(false);
   const headerDownRef = useRef();
 
   const handleScroll = () => {
@@ -40,12 +39,11 @@ const Header = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-    }
-
-  },[])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const { totalLength } = useSelector((item) => item.basket);
   const { totalLength2 } = useSelector((item) => item.favorite);
@@ -61,7 +59,7 @@ const Header = () => {
 
       <div className="header-mid w-full h-[135px] flex justify-center items-center border-b-2 ">
         <div className="nav-mid w-[80%] h-[135x]  flex justify-between items-center">
-          <div className="logo">
+          <div onClick={() => navigate("/")} className="logo cursor-pointer">
             <img
               className="w-[157px] h-[50px]"
               src="https://livedemo00.template-help.com/wt_prod-25548/unit-car-repair/images/logo-default-314x100.png"
@@ -97,54 +95,42 @@ const Header = () => {
         </div>
       </div>
 
-     <div
+      <div
         ref={headerDownRef}
         className={`header-down w-[80%] h-[64px] bg-[#343434] ${
-          scroll ? 'sticky-header' : ''
+          scroll ? "sticky-header" : ""
         }`}
       >
         <nav className="flex justify-between items-center">
+          <ul className="menu flex justify-around items-center w-[555px] text-[white]">
+            {menuItems.map((menu) => (
+              <li
+                key={menu.id}
+                className="menu-item relative cursor-pointer"
+                onMouseEnter={() => handleMouseEnter(menu.id)}
+                onMouseLeave={handleMouseLeave}
+              >
+                <a className="tracking-wider duration-500 hover:text-[#4675FF]">
+                  {menu.title}
+                </a>
 
-
-
-        <ul className="menu flex justify-around items-center w-[555px] text-[white]">
-          {menuItems.map((menu) => (
-            <li
-              key={menu.id}
-              className="menu-item relative cursor-pointer"
-              onMouseEnter={() => handleMouseEnter(menu.id)}
-              onMouseLeave={handleMouseLeave}
-            >
-              <a className="tracking-wider duration-500 hover:text-[#4675FF]">
-                {menu.title}
-              </a>
-
-    
-              {activeItem === menu.id && (
-
-                <div className="submenu-container">
-
-            <ul className="submenu hidden z-10 absolute top-full left-0 bg-white text-black p-3 shadow-lg">
-                  {menu.items.map((subItem, index) => (
-                    <li
-                      key={index}
-                      className=" py-1 px-2 hover:bg-gray-200 hover:cursor-pointer"
-                    >
-                      {subItem}
-                    </li>
-                  ))}
-                </ul>
-
-                </div>
-
-              )}
-            </li>
-          ))}
-        </ul>
-
-
-
-
+                {activeItem === menu.id && (
+                  <div className="submenu-content">
+                    <ul className="submenu z-10 absolute top-full left-0 bg-white text-black p-3 shadow-lg">
+                      {menu.items.map((subItem, index) => (
+                        <li
+                          key={index}
+                          className="py-1 px-2 hover:bg-gray-200 hover:cursor-pointer"
+                        >
+                          {subItem}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
 
           <div className="icons w-[170px] h-[64px] flex items-center justify-evenly text-[white] bg-[#5D5D5D]">
             <FaRegUser
@@ -169,14 +155,9 @@ const Header = () => {
               />
             </Badge>
           </div>
-
         </nav>
-
-
-
-
       </div>
-
+      
     </header>
   );
 };

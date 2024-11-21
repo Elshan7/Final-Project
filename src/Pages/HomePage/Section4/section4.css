@@ -50,10 +50,6 @@
     transform: skew(-20deg) scale(1.05); 
 }
 
-
-
-
-
 .sct4-title::before {
     content: '';
     position: absolute;
