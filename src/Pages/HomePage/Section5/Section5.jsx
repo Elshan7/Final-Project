@@ -50,7 +50,7 @@ const Section5 = () => {
             <CgShoppingCart className='text-[50px] text-[white]' />
           </div>
           <div className="sct5-info flex flex-col items-center">
-            {inView && <CountUp start={0} end={320} duration={2.5} className='block font-[Rajdhani] text-[48px] h-[60px] text-[white] font-bold' />}
+            {inView && <CountUp start={0} end={1320} duration={2.5} className='block font-[Rajdhani] text-[48px] h-[60px] text-[white] font-bold' />}
             <span className='text-[18px] font-semibold font-[Rajdhani] text-[white]'>PRODUCTS IN STOCK</span>
           </div>
         </div>
