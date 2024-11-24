@@ -146,7 +146,7 @@ const Header = () => {
               />
             </Badge>
 
-            <IoSearch className="text-[22px] hover:cursor-pointer" />
+            <IoSearch onClick={() => navigate("/search")}  className="text-[22px] hover:cursor-pointer" />
 
             <Badge badgeContent={totalLength} color="primary">
               <PiShoppingCartBold

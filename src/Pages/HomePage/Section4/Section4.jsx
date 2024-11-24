@@ -18,8 +18,10 @@ const Section4 = () => {
   };
 
   return (
-    <section className="sct4 w-full h-[1480px] bg-[#F2F2F2] flex justify-center items-center">
-      <div className="sct4-content w-[90%] h-[1215px]  flex flex-col justify-between items-center">
+    <section className="sct4 w-full h-[1700px] bg-[#F2F2F2] flex justify-center items-center  mt-8">
+
+      <div className="sct4-content w-[90%] h-[1645px]  flex flex-col justify-start items-center ">
+
         <div className="sct4-title w-full">
           <h2 className="sct4-h2">POPULAR PRODUCTS</h2>
         </div>
@@ -32,7 +34,7 @@ const Section4 = () => {
             <button onClick={() => handleButtonClick("otherParts")} className="bg-slate-400 duration-700 p-2 rounded-lg hover:opacity-60">Other parts</button>
           </div>
 
-          <div className="sct4-cards w-full h-[1056px] flex flex-wrap gap-6">
+          <div className="sct4-cards w-full h-[1056px] flex justify-center flex-wrap gap-6">
             {active === "allProducts" &&
               value.map((item) => <Card key={item.id} item={item} />)}
 
@@ -52,7 +54,10 @@ const Section4 = () => {
                 .map((item) => <Card key={item.id} item={item} />)}
           </div>
         </div>
+
+
       </div>
+
     </section>
   );
 };

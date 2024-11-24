@@ -5,6 +5,8 @@ import Favorite from "./Pages/Favorite/Favorite";
 import SignUp from "./Pages/SignUp/SignUp";
 import Login from "./Pages/Login/Login";
 import DetailPage from "./Pages/DetailPage/DetailPage";
+import Map from "./Pages/Map/Map";
+import Search from "./Pages/Search/Search";
 
 
 
@@ -19,7 +21,9 @@ const App = () => {
           <Route exact path="/signUp" element={<SignUp />} />
           <Route exact path="/basket" element={<AddToChart />} />
           <Route exact path="/favorite" element={<Favorite />} />
-          <Route path="/detail/:id" element={<DetailPage />} />
+          <Route path="/detail/:id" element={<DetailPage />} /> 
+           <Route path="/map" element={<Map/>} />
+          <Route path="/search" element={<Search/>} />
         </Routes>
       </BrowserRouter>
     </>
