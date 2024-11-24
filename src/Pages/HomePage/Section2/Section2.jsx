@@ -1,12 +1,20 @@
-import React, { useRef } from "react";
+import  { useEffect, useRef } from "react";
 import "./section2.css";
-import { TbSteeringWheel } from "react-icons/tb";
+import { useDispatch, useSelector } from "react-redux";
+import { getService } from "../../../Redux/feature/service/serviceSlice";
 
 const Section2 = () => {
   const containerRef = useRef(null);
   let isDragging = false;
   let startY;
   let scrollTop;
+
+  const dispatch = useDispatch();
+  const { value } = useSelector((state) => state.service);
+
+  useEffect(() => {
+    dispatch(getService());
+  }, [dispatch]);
 
   const handleMouseDown = (event) => {
     isDragging = true;
@@ -25,10 +33,10 @@ const Section2 = () => {
   };
 
   return (
-    <section className="sct2 w-full h-[665px] flex justify-center items-end">
+    <section id="sct2" className="sct2 w-full h-[665px] flex justify-center items-end">
       <div className="sct2-container w-[80%] h-[545px]  flex justify-end ">
         <div className="sct2-rightcontainer w-[50%] h-[545px] ">
-          <h2 className='w-full h-[105px] text-[45px] text-[#151515] font-bold  font-["Montserrat"]'>
+          <h2 className=' text-[#151515] font-bold  font-["Montserrat"] mb-3 ml-5'>
             WHY CHOOSE US
           </h2>
 
@@ -40,90 +48,26 @@ const Section2 = () => {
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}
           >
-            <div className="sct2-box w-[522px] h-[164px]  bg-[#FFFFFF] flex justify-center items-center rounded-md mb-5">
-              <div className="sct2-subbox w-[482px] h-[104px] flex justify-center items-center">
-                <div className="left-icon w-[90px] h-[84px] ">
-                  <TbSteeringWheel className="w-[75px] h-[75px]" />
-                </div>
-                <div className="right-subtext w-[352px] h-[84px]  flex flex-col justify-between items-center ">
-                  <h4 className='text-[20px] text-[#151515] font-["Montserrat"] uppercase font-[700]'>
-                    Repair Warranty
-                  </h4>
-                  <p className='text-[15px] font-[400] w-[323px] leading-normal text-[#777777] font-["Lato"] text-center tracking-wide'>
-                    We give you a free 3 year 36,000 mile nationwide warranty &
-                    roadside assistance.
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            <div className="sct2-box w-[522px] h-[164px]  bg-[#FFFFFF]  flex justify-center items-center rounded-md mb-5">
+            {
+              value && value.map((item) =>  <div key={item.id}  className="sct2-box w-[522px] h-[164px]  bg-[#FFFFFF] flex justify-center items-center rounded-md mb-5">
               <div className="sct2-subbox w-[482px] h-[104px] flex justify-center items-center">
                 <div className="left-icon w-[90px] h-[84px] ">
-                  <TbSteeringWheel className="w-[75px] h-[75px]" />
-                </div>
-                <div className="right-subtext w-[352px] h-[84px]  flex flex-col justify-between items-center ">
-                  <h4 className='text-[20px] text-[#151515] font-["Montserrat"] uppercase font-[700]'>
-                    Repair Warranty
-                  </h4>
-                  <p className='text-[15px] font-[400] w-[323px] leading-normal text-[#777777] font-["Lato"] text-center tracking-wide'>
-                    We give you a free 3 year 36,000 mile nationwide warranty &
-                    roadside assistance.
-                  </p>
-                </div>
-              </div>
-            </div>
+                  <img className="w-[85px] h-[85px]" src={item.image} alt="" />
 
-            <div className="sct2-box w-[522px] h-[164px]  bg-[#FFFFFF]  flex justify-center items-center rounded-md mb-5">
-              <div className="sct2-subbox w-[482px] h-[104px] flex justify-center items-center">
-                <div className="left-icon w-[90px] h-[84px] ">
-                  <TbSteeringWheel className="w-[75px] h-[75px]" />
                 </div>
                 <div className="right-subtext w-[352px] h-[84px]  flex flex-col justify-between items-center ">
                   <h4 className='text-[20px] text-[#151515] font-["Montserrat"] uppercase font-[700]'>
-                    Repair Warranty
+                    {item.title}
                   </h4>
                   <p className='text-[15px] font-[400] w-[323px] leading-normal text-[#777777] font-["Lato"] text-center tracking-wide'>
-                    We give you a free 3 year 36,000 mile nationwide warranty &
-                    roadside assistance.
+                    {item.description}
                   </p>
                 </div>
               </div>
             </div>
+              )}
 
-            <div className="sct2-box w-[522px] h-[164px]  bg-[#FFFFFF]  flex justify-center items-center rounded-md mb-5">
-              <div className="sct2-subbox w-[482px] h-[104px] flex justify-center items-center">
-                <div className="left-icon w-[90px] h-[84px] ">
-                  <TbSteeringWheel className="w-[75px] h-[75px]" />
-                </div>
-                <div className="right-subtext w-[352px] h-[84px]  flex flex-col justify-between items-center ">
-                  <h4 className='text-[20px] text-[#151515] font-["Montserrat"] uppercase font-[700]'>
-                    Repair Warranty
-                  </h4>
-                  <p className='text-[15px] font-[400] w-[323px] leading-normal text-[#777777] font-["Lato"] text-center tracking-wide'>
-                    We give you a free 3 year 36,000 mile nationwide warranty &
-                    roadside assistance.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="sct2-box w-[522px] h-[164px]  bg-[#FFFFFF]  flex justify-center items-center rounded-md mb-5">
-              <div className="sct2-subbox w-[482px] h-[104px] flex justify-center items-center">
-                <div className="left-icon w-[90px] h-[84px] ">
-                  <TbSteeringWheel className="w-[75px] h-[75px]" />
-                </div>
-                <div className="right-subtext w-[352px] h-[84px]  flex flex-col justify-between items-center ">
-                  <h4 className='text-[20px] text-[#151515] font-["Montserrat"] uppercase font-[700]'>
-                    Repair Warranty
-                  </h4>
-                  <p className='text-[15px] font-[400] w-[323px] leading-normal text-[#777777] font-["Lato"] text-center tracking-wide'>
-                    We give you a free 3 year 36,000 mile nationwide warranty &
-                    roadside assistance.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

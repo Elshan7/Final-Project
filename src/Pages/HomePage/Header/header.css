@@ -28,6 +28,7 @@
   width: 100%;
   z-index: 50;
   border-radius: 0;
+ padding-right: 1.5rem;
 }
 
 
@@ -70,8 +71,6 @@
 
 }
 
-
-
 .submenu {
   display: block;
   min-width: 180px;
@@ -81,4 +80,18 @@
   color: #000;
   padding: 10px;
   box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+#header .basicmenu {
+  width: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
+
+#basic-button {
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
 }

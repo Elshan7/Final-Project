@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
+import 'swiper/css/autoplay';
 
 
 const Section1 = () => {
@@ -11,6 +12,7 @@ const Section1 = () => {
     <Swiper
       rewind={true}
       navigation={true}
+      autoplay={{ delay: 2000 }}
       modules={[Navigation]}
       className="mySwiper"
     >
@@ -27,3 +29,6 @@ const Section1 = () => {
 }
 
 export default Section1
+
+
+

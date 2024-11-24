@@ -1,5 +1,4 @@
  .sct3 {
-    background: linear-gradient(to right, #eeeeee 0%, white 100%);
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #000;
@@ -10,6 +9,27 @@
     justify-content: space-between;
     align-items: center;
 }
+
+#sct3 h2 {
+  background-color: #E53E29;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 0 20px;
+    height: 54px;
+    line-height: 54px;
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+    transform: skew(-20deg);
+    display: inline-block;
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 2px;
+    z-index: 2;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
 
 #sct3 .swiper {
     width: 100%;

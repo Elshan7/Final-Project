@@ -1,3 +1,23 @@
 .box-content {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+#sct6 h2{
+    background-color: #E53E29;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 0 20px;
+    height: 54px;
+    width: 20%;
+    line-height: 54px;
+    font-size: 34px;
+    text-align: center;
+    position: relative;
+    transform: skew(-20deg);
+    display: inline-block;
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 2px;
+    z-index: 2;
+    overflow: hidden;
+    cursor: pointer;
+}

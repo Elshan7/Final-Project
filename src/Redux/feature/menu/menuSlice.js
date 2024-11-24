@@ -5,10 +5,12 @@ const initialState = {
     id: 1,
     title: "HOME",
     items: [
-      'SECTION 1',
-      'SECTION 2',
-      'SECTION 3',
-      'SECTION 4',
+      'WHY CHOOSE US',
+      'OUR SERVICES',
+      'ALL PRODUCTS',
+      'STATISTICS',
+      'OUR TEAM',
+      'OUR LOCATION'
     ]
   },
   {

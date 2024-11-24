@@ -8,14 +8,17 @@ import "../../components/Rating/Rating";
 import { FaShoppingBasket } from "react-icons/fa";
 import { addToBasket } from "../../Redux/feature/basket/basketSlice";
 import { useDispatch, useSelector } from "react-redux";
+import Carousel from "../../components/Carousel/Carousel";
 
 const DetailPage = () => {
-  const { id } = useParams(); 
+  const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
+
   const [error, setError] = useState(null);
-  const [quantity, setQuantity] = useState(1); 
-  const [totalPrice, setTotalPrice] = useState(0); 
+
+  const [quantity, setQuantity] = useState(1);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const [addedToCart, setAddedToCart] = useState(false);
   const [buttonState, setButtonState] = useState(false);
@@ -31,7 +34,7 @@ const DetailPage = () => {
           `https://66ffcd724da5bd237552095c.mockapi.io/products/${id}`
         );
         setProduct(response.data);
-        setTotalPrice(response.data.newPrice); 
+        setTotalPrice(response.data.newPrice);
         setLoading(false);
       } catch (err) {
         console.error("Error fetching product:", err);
@@ -46,14 +49,14 @@ const DetailPage = () => {
   const handleIncrement = () => {
     const newQuantity = quantity + 1;
     setQuantity(newQuantity);
-    setTotalPrice(newQuantity * product.newPrice); 
+    setTotalPrice(newQuantity * product.newPrice);
   };
 
   const handleDecrement = () => {
     if (quantity > 1) {
       const newQuantity = quantity - 1;
       setQuantity(newQuantity);
-      setTotalPrice(newQuantity * product.newPrice); 
+      setTotalPrice(newQuantity * product.newPrice);
     }
   };
 
@@ -63,22 +66,23 @@ const DetailPage = () => {
       return;
     }
 
-    
     dispatch(addToBasket(product));
- 
+
     setButtonState(true);
     setAddedToCart(true);
 
     setTimeout(() => {
       setButtonState(false);
       setAddedToCart(false);
-    }, 1000); 
+    }, 1000);
   };
 
-
-
   if (loading) {
-    return <div className="flex justify-center items-center text-2xl">Loading...</div>;
+    return (
+      <div className="flex justify-center items-center text-2xl mt-5">
+        Loading...
+      </div>
+    );
   }
 
   if (error) {
@@ -89,25 +93,38 @@ const DetailPage = () => {
     <>
       <Header />
 
-      <div className="container mx-auto p-8 bg-gray-100">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white p-6 rounded-lg shadow-md">
-          {/* Left: Product Image */}
-          <img
-            src={product.image}
-            alt={product.title}
-            className="w-full h-auto rounded-lg"
-          />
+      <div className="container mx-auto p-8 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white p-6 rounded-lg shadow-lg">
+          <div className="left-side ">
+            <img
+              src={product.image}
+              alt={product.title}
+              className="w-full h-[500px] rounded-lg object-cover "
+            />
 
-          {/* Right: Product Details */}
-          <div>
+            <div className="detail-img grid grid-cols-3 gap-2  ">
+          
+      <div className="swiper-container col-span-3 mt-5"> 
+    <Carousel />
+  </div>
+            </div>
+          </div>
+
+          <div className="right-side  flex flex-col justify-evenly ">
             <h1 className="text-3xl font-bold">{product.title}</h1>
+
             <div className="mt-4">
-              <span className="text-2xl line-through mr-2 opacity-30">
+              <span className="text-xl text-black font-bold mr-3">Price:</span>
+              <span className="text-xl line-through mr-2 opacity-30">
                 ${product.oldPrice}
               </span>
-              <span className="text-red-500 text-3xl">${product.newPrice}</span>
+              <span className="text-red-500 text-2xl">${product.newPrice}</span>
             </div>
-            <p className="mt-4 text-gray-600">
+
+            <p className=" text-[16px] text-gray-600">
+              <strong className="font-bold leading-8 tracking-wider text-black text-xl">
+                Description :
+              </strong>{" "}
               From the steering system to the front and rear suspension, a
               gas-powered vehicle is filled with a host of parts that come
               together to power your car, truck or SUV down the road. While it
@@ -116,22 +133,29 @@ const DetailPage = () => {
               parts of your vehicle is extremely helpful in visualizing how your
               vehicle functions.
             </p>
-            <p className="mt-2">
-              <strong className="mr-2">Category:</strong> {product.category}
-            </p>
-            <p>
-              <strong className="mr-2">Tags:</strong> Car Details, Car Services
-            </p>
 
-            <Rating/>
+            <div className="small-details flex flex-col gap-4">
+              <p className="text-md">
+                <strong className="mr-2 text-xl">Category:</strong>{" "}
+                {product.category}
+              </p>
 
-            {/* Quantity and Total Price */}
+              <p>
+                <strong className="mr-2 text-xl">Tags:</strong> Car Details, Car
+                Services
+              </p>
+
+              <p className="text-xl font-bold flex items-center gap-2">
+                Rating:
+                <Rating />
+              </p>
+            </div>
+
             <div className="flex items-center space-x-4 mt-6">
-              {/* Quantity Controls */}
-              <div className="flex items-center border rounded-lg">
+              <div className="flex items-center border w-44 h-12 justify-center rounded-lg ">
                 <button
                   onClick={handleDecrement}
-                  className="px-4 py-2 text-gray-600 hover:bg-gray-100"
+                  className="px-4 py-2   hover:bg-gray-100"
                 >
                   -
                 </button>
@@ -149,24 +173,22 @@ const DetailPage = () => {
                 </button>
               </div>
 
-              {/* Total Price */}
               <div className="text-lg">
-                <strong>Total Price:</strong>{" "}
+                <strong className="text-xl mr-2">Total Price:</strong>{" "}
                 <span className="text-red-500">${totalPrice.toFixed(2)}</span>
               </div>
             </div>
 
-            {/* Add to Cart Button */}
-
-            <button
-              onClick={handleAddToCart}
-              className={`px-6 py-2 mt-4 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 ${
-                buttonState ? "bg-green-500" : "bg-[#E53E29]"
-              } transition-all`}
-            >
-              {addedToCart ? <FaShoppingBasket /> : "Add to cart"}
-            </button>
-
+            <div className="btn-down">
+              <button
+                onClick={handleAddToCart}
+                className={`flex justify-center items-center w-56 h-14 text-xl text-white font-semibold rounded-lg transition-all ${
+                  buttonState ? "bg-green-500" : "bg-red-500 hover:bg-gray-400"
+                }`}
+              >
+                {addedToCart ? <FaShoppingBasket /> : "Add to cart"}
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -177,17 +199,3 @@ const DetailPage = () => {
 };
 
 export default DetailPage;
-
-
-
-
-
-
-
-
-
-
-
-
-
-

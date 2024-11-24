@@ -6,6 +6,8 @@ import SignUp from "./Pages/SignUp/SignUp";
 import Login from "./Pages/Login/Login";
 import DetailPage from "./Pages/DetailPage/DetailPage";
 
+
+
 const App = () => {
   return (
     <>

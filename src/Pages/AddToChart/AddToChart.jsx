@@ -4,6 +4,8 @@ import Footer from "../HomePage/Footer/Footer";
 import { MdDelete } from "react-icons/md";
 import { deleteFromBasket } from "../../Redux/feature/basket/basketSlice";
 import { useState } from "react";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { RxDotFilled } from "react-icons/rx";
 
 const AddToChart = () => {
   const basketItems = useSelector((state) => state.basket.items);
@@ -27,27 +29,43 @@ const AddToChart = () => {
     );
   };
 
+
+
+  const calculateTotal = () => {
+    return basketItems.reduce((total, item, index) => {
+      return total + item.newPrice * quantities[index];
+    }, 0);
+  };
+
+
+
+
   return (
     <>
       <Header />
 
+      <div className="tracking flex w-full h-6  mt-2 ">
+                <span className='flex items-center gap-2 ml-4 text-sm font-semibold tracking-wider'><RxDotFilled className='font-bold text-black text-md' /> HOME <FaArrowRightLong className="text-gray-950 text-sm" /> AddToCart </span>
+            </div>
+
+
       <section className="cart-sct my-3">
         <div className="basket-title w-full h-[40px]  flex justify-start bg-slate-300">
           <ul className="flex justify-around w-[70%] ">
-            <li className="w-[300px]  flex justify-center items-center">
-              <a href="">Product</a>
+            <li className="w-[300px]  flex justify-center items-center ">
+              <a  className="text-xl font-semibold flex items-center" href=""><RxDotFilled />Product</a>
             </li>
             <li className="w-[200px]  flex justify-center items-center">
-              <a href="">Short Description</a>
+              <a className="text-xl font-semibold flex items-center" href=""><RxDotFilled />Title</a>
             </li>
             <li className="w-[100px]  flex justify-center items-center">
-              <a href="">Price</a>
+              <a className="text-xl font-semibold flex items-center" href=""><RxDotFilled />Price</a>
             </li>
             <li className=" flex justify-center items-center w-[100px] ">
-              <a href="">Quantity</a>
+              <a className="text-xl font-semibold flex items-center" href=""><RxDotFilled />Quantity</a>
             </li>
             <li className="flex justify-center items-center w-[100px]  ">
-              <a href="">Total Price</a>
+              <a className="text-xl font-semibold flex items-center" href=""><RxDotFilled />Price</a>
             </li>
           </ul>
         </div>
@@ -55,31 +73,36 @@ const AddToChart = () => {
         {basketItems.length > 0 ? (
           basketItems.map((item, index) => {
             if (!item) {
-              return null; // Skip invalid items
+              return null; 
             }
 
             return (
               <div
                 key={item.id}
-                className="basket w-full h-auto flex justify-center items-center"
+                className="basket w-full h-auto  flex justify-center items-center shadow-md "
               >
                 <div className="basket-container w-[95%] h-[90%] flex my-1">
                   <div className="basket-content w-[75%] h-auto rounded-md ">
-                    <div className="basket-detail w-full h-auto flex items-center justify-between ">
-                      <div className="img-div w-[500px] h-[270px] flex items-center ">
+                    <div className="basket-detail w-full h-auto flex items-center justify-between  ">
+
+                      <div className="img-div w-[323px] h-[270px] flex justify-around items-center  ">
                         <img
                           className="w-[320px] h-[270px] object-contain"
-                          src={item.image || "/path/to/default-image.jpg"} // Fallback image
-                          alt={item.title || "Product"} // Fallback alt text
+                          src={item.image || "/path/to/default-image.jpg"} 
+                          alt={item.title || "Product"} 
                         />
-                        <p>{item.title}</p>
+                        
                       </div>
 
-                      <div className="price w-[90px] h-[250px] flex items-center justify-center">
-                        <span>${item.newPrice}</span>
+                      <div className="title w-[200px] h-[270px]  flex items-center">
+                      <p className="text-xl">{item.title}</p>
                       </div>
 
-                      <div className="quantity w-[100px] h-[250px] flex items-center justify-center">
+                      <div className="price w-[90px] h-[250px] flex items-center  ">
+                        <span className=" text-xl">$ {item.newPrice}</span>
+                      </div>
+
+                      <div className=" text-xl quantity w-[100px] h-[250px] flex items-center justify-center">
                         <button
                           onClick={() => handleDecrement(index)}
                           className="border w-5 h-5 flex items-center justify-center"
@@ -95,7 +118,7 @@ const AddToChart = () => {
                         </button>
                       </div>
 
-                      <div className="total-price w-[100px] h-[250px] flex justify-center items-center">
+                      <div className="text-xl total-price w-[100px] h-[250px] flex justify-center items-center">
                         <span>
                           ${(item.newPrice * quantities[index]).toFixed(2)}
                         </span>
@@ -103,8 +126,9 @@ const AddToChart = () => {
 
                       <MdDelete
                         onClick={() => handleDeleteFromCart(item)}
-                        className="cursor-pointer duration-700 text-[25px] hover:text-red-500"
+                        className="w-8 h-13 cursor-pointer duration-700 text-[25px] hover:text-red-500"
                       />
+
                     </div>
                   </div>
                 </div>
@@ -114,6 +138,17 @@ const AddToChart = () => {
         ) : (
           <p className="text-center my-4 text-2xl">No items in the cart.</p>
         )}
+
+        
+        {basketItems.length > 0 && (
+          <div className="total-amount w-[71%] flex justify-end my-5 ">
+            <div className="text-xl font-semibold flex justify-center items-center  w-80">
+              <span className="mr-3 text-2xl">Total Amount: </span>
+              <span className="text-2xl">${calculateTotal().toFixed(2)}</span>
+            </div>
+          </div>
+        )}
+
       </section>
 
       <Footer />
