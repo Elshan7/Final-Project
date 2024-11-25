@@ -72,7 +72,7 @@ const Header = () => {
 
           <div className="nav-mid-text w-[563px] h-[58px] flex">
             <div className="left-mid w-[313px] h-[58px] flex">
-              <MdLocationPin className="w-[40.75px] h-[40px] text-[#cfd0d0] mr-1.5 mt-1" />
+              <MdLocationPin onClick={() => navigate("/admin")} className="w-[40.75px] cursor-pointer h-[40px] text-[#cfd0d0] mr-1.5 mt-1" />
               <div className="unit-body w-[225px] h-[58px]">
                 <a href="#" className="text-[15px] text-[#151515]">
                   523 Sylvan Ave, 5th Floor
@@ -83,7 +83,7 @@ const Header = () => {
             </div>
 
             <div className="right-mid w-[250px] h-[58px] flex justify-end">
-              <MdLocalPhone className="w-[40.75px] h-[40px] text-[#cfd0d0] mr-3 mt-1" />
+              <MdLocalPhone className="w-[40.75px] cursor-pointer h-[40px] text-[#cfd0d0] mr-3 mt-1" />
               <div className="unit-body2">
                 <a href="tel:#" className="text-[15px] text-[#151515]">
                   +1 (844) 123 456 78

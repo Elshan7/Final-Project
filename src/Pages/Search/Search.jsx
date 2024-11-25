@@ -18,18 +18,18 @@ const Search = () => {
     dispatch(getProduct());
   }, [dispatch]);
 
-  // Filter and sort products based on search query and sort criteria
+ 
   useEffect(() => {
     let filteredProducts = [...value];
 
-    // Filter by search query
+   
     if (searchQuery) {
       filteredProducts = filteredProducts.filter((product) =>
         product.title.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
 
-    // Apply sorting
+  
     if (sortCriteria === "price-asc") {
       filteredProducts.sort(
         (a, b) => parseFloat(a.newPrice) - parseFloat(b.newPrice)
@@ -52,7 +52,7 @@ const Search = () => {
       <Header />
 
       <section className="w-full h-auto  flex flex-col items-center my-5">
-        {/* Filter and Search Controls */}
+     
         <div className="w-[90%] flex justify-between items-center p-4">
           <input
             type="text"
@@ -74,7 +74,7 @@ const Search = () => {
           </select>
         </div>
 
-        {/* Product List */}
+ 
         <div className="w-[90%] h-auto flex flex-col items-center ">
           <div className="h-auto flex justify-center items-center flex-wrap gap-6">
             {sortedProducts.length > 0 ? (

@@ -7,6 +7,7 @@ import Login from "./Pages/Login/Login";
 import DetailPage from "./Pages/DetailPage/DetailPage";
 import Map from "./Pages/Map/Map";
 import Search from "./Pages/Search/Search";
+import AdminPanel from "./Pages/AdminPanel/AdminPanel";
 
 
 
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/detail/:id" element={<DetailPage />} /> 
            <Route path="/map" element={<Map/>} />
           <Route path="/search" element={<Search/>} />
+          <Route path="/admin" element={<AdminPanel/>} />
         </Routes>
       </BrowserRouter>
     </>
