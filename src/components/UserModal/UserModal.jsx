@@ -4,7 +4,8 @@ import Modal from "@mui/material/Modal";
 import Button from "@mui/material/Button";
 import { useDispatch } from "react-redux";
 import { MdEdit } from "react-icons/md";
-import { updateProduct } from "../../Redux/feature/product/productSlice"; 
+import { updateUser } from "../../Redux/feature/login/loginSlice";
+ 
 
 const style = {
   position: "absolute",
@@ -20,11 +21,11 @@ const style = {
   pb: 3,
 };
 
-export default function NestedModal({ item }) {
+export default function UserModal({ item }) {
   const [open, setOpen] = useState(false);
-  const [title, setTitle] = useState(item.title);
-  const [category, setCategory] = useState(item.category);
-  const [price, setPrice] = useState(item.newPrice);
+  const [fullname, setFullname] = useState(item.fullname);
+  const [email, setEmail] = useState(item.email);
+  const [username, setUsername] = useState(item.username);
   const [image, setImage] = useState(item.image);
 
   const dispatch = useDispatch();
@@ -33,18 +34,18 @@ export default function NestedModal({ item }) {
   const handleClose = () => setOpen(false);
 
   const handleSave = () => {
-    const updatedProduct = {
+    const updatedUser = {
       id: item.id, 
-      title,
-      category,
-      newPrice: price, 
+      fullname,
+      email,
+      username: username, 
       image,
     };
 
   
-    dispatch(updateProduct(updatedProduct))
+    dispatch(updateUser(updatedUser))
       .then(() => handleClose()) 
-      .catch((error) => console.error("Failed to update product:", error));
+      .catch((error) => console.error("Failed to update user:", error));
   };
 
   return (
@@ -61,24 +62,24 @@ export default function NestedModal({ item }) {
         <Box sx={{ ...style, width: 450 }}>
           <div className="modal-title flex flex-col gap-2">
             <label className="text-xl text-white" htmlFor="">
-              Title:
+              Fullname:
             </label>
             <input
               type="text"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
+              value={fullname}
+              onChange={(e) => setFullname(e.target.value)}
               className="shadow-md focus:shadow-lg rounded-xl w-80 h-7 border border-yellow-400"
             />
           </div>
 
           <div className="modal-category flex flex-col gap-2 mt-2">
             <label className="text-xl text-white" htmlFor="">
-              Category:
+              Email:
             </label>
             <input
-              type="text"
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="shadow-md focus:shadow-lg rounded-xl w-80 h-7 border border-yellow-400"
             />
           </div>
@@ -91,7 +92,7 @@ export default function NestedModal({ item }) {
               <img
                 className="items-center w-32 object-cover h-32 rounded-full"
                 src={image}
-                alt={title || "product"}
+                alt={fullname || "user"}
               />
             </div>
             <input
@@ -104,12 +105,12 @@ export default function NestedModal({ item }) {
 
           <div className="modal-price flex flex-col gap-2 mt-4">
             <label className="text-xl text-white" htmlFor="">
-              Price:
+              Username:
             </label>
             <input
               type="text"
-              value={price}
-              onChange={(e) => setPrice(e.target.value)}
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               className="shadow-md focus:shadow-lg rounded-xl w-80 h-7 border border-yellow-400"
             />
           </div>

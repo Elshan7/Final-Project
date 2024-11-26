@@ -31,9 +31,9 @@ const Sidebar = ({ onMenuClick }) => {
           <FaChartBar className="icon" />
           {isExpanded && <span>Trending</span>}
         </li>
-        <li onClick={() => handleMenuClick("Movies")}>
+        <li onClick={() => handleMenuClick("Information")}>
           <FaFilm className="icon" />
-          {isExpanded && <span>Movies</span>}
+          {isExpanded && <span>Information</span>}
         </li>
         <li onClick={() => handleMenuClick("Users")}>
           <FaUsers className="icon" />
