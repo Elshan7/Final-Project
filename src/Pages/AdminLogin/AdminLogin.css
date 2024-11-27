@@ -1,0 +1,31 @@
+.adminlogin-sct {
+    background-image: url(https://cdn2.vectorstock.com/i/1000x1000/21/66/car-service-icon-on-white-background-vector-27252166.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  
+  #adminlogin .admincontainer {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      
+  }
+  
+  #adminlogin label , #login input , #login .forgot a , #login .text1 {
+    font-family: Poppins-Regular;
+  }
+  
+  #adminlogin .icons a {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  
+  #adminlogin .icons a:hover {
+    background-color: black;
+    transition: 1s;
+  }
+  

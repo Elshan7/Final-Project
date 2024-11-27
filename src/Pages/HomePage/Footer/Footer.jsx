@@ -12,7 +12,7 @@ const Footer = () => {
     <footer className="w-full h-[540px] bg-[#343434]">
       <div className="footer-up w-full h-[402px] flex justify-center items-center">
         <div className="footer-up-container w-[80%] h-[273px] flex ">
-          <div className="footer-part1 w-[33.3%] h-[273px] ">
+          <div data-aos="zoom-in-down" className="footer-part1 w-[33.3%] h-[273px] ">
             <h5 className="font-[Montserrat] text-[20px] text-[#FFF] duration-700 cursor-pointer tracking-wide font-bold hover:text-blue-600 hover:ml-2">
               OUR CONTACTS
             </h5>
@@ -44,7 +44,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="footer-part2 w-[33.3%] h-[273px] ">
+          <div data-aos="zoom-in-down"  className="footer-part2 w-[33.3%] h-[273px] ">
             <h5 className="font-[Montserrat] text-[20px] cursor-pointer duration-700 text-[#FFF] tracking-wide font-bold hover:text-blue-600 hover:ml-2 ">
               QUICK LINKS
             </h5>
@@ -131,7 +131,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="footer-part3 w-[33.3%] h-[273px] ">
+          <div data-aos="zoom-in-down" className="footer-part3 w-[33.3%] h-[273px] ">
             <h5 className="font-[Montserrat] text-[20px] text-[#FFF] duration-700 cursor-pointer tracking-wide font-bold hover:text-blue-600 hover:ml-2">
               GET IN TOUCH
             </h5>

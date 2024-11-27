@@ -8,7 +8,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const Section3 = () => {
   return (
-    <section id="sct3" className=' sct3 w-full h-[470px] '>
+    <section data-aos-duration="2000" data-aos="flip-left" id="sct3" className=' sct3 w-full h-[470px] '>
 
         <h2 className="sct3-h2 font-[Montserrat] text-[40px] font-bold mt-4">OUR SERVICES</h2>
 

@@ -49,6 +49,7 @@ const initialState = {
     id: 5,
     title: "CONTACT US",
     items: [
+      'OUR LOCATION',
       'GRID GALLERY',
       'MASONRY GALLERY',
       'Sony',

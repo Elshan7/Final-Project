@@ -8,6 +8,8 @@ import DetailPage from "./Pages/DetailPage/DetailPage";
 import Map from "./Pages/Map/Map";
 import Search from "./Pages/Search/Search";
 import AdminPanel from "./Pages/AdminPanel/AdminPanel";
+import AdminLogin from "./Pages/AdminLogin/AdminLogin";
+
 
 const App = () => {
   return (
@@ -24,6 +26,7 @@ const App = () => {
           <Route path="/map" element={<Map />} />
           <Route path="/search" element={<Search />} />
           <Route path="/admin" element={<AdminPanel />} />
+          <Route path="/adminlogin" element={<AdminLogin />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -35,7 +35,7 @@ const Section5 = () => {
     <section ref={sectionRef} className='sct5 w-full h-[425px] flex justify-center items-center '>
       <div className="sct5-content w-[80%] h-[225px] flex">
         
-        <div className="sct5-part w-[25%] h-full flex flex-col justify-around items-center " data-aos="fade-up-left">
+        <div className="sct5-part w-[25%] h-full flex flex-col justify-around items-center " >
           <div className="sct5-icon bg-[#333E4899] w-[100px] h-[100px] rounded-full flex items-center justify-center">
             <FaUserTie className='text-[50px] text-[white]' />
           </div>

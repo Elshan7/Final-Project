@@ -49,6 +49,18 @@ const Header = () => {
   const { totalLength } = useSelector((item) => item.basket);
   const { totalLength2 } = useSelector((item) => item.favorite);
 
+  const handleSubItemClick = (subItem) => {
+    if (subItem === "OUR LOCATION") {
+      navigate("/map");
+    }
+  };
+
+  const handleMenuItemClick = (itemTitle) => {
+    if (itemTitle === "HOME") {
+      navigate("/");
+    }
+  };
+
   return (
     <header
       id="header"
@@ -72,7 +84,7 @@ const Header = () => {
 
           <div className="nav-mid-text w-[563px] h-[58px] flex">
             <div className="left-mid w-[313px] h-[58px] flex">
-              <MdLocationPin onClick={() => navigate("/admin")} className="w-[40.75px] cursor-pointer h-[40px] text-[#cfd0d0] mr-1.5 mt-1" />
+              <MdLocationPin  className="w-[40.75px] cursor-pointer h-[40px] text-[#cfd0d0] mr-1.5 mt-1" />
               <div className="unit-body w-[225px] h-[58px]">
                 <a href="#" className="text-[15px] text-[#151515]">
                   523 Sylvan Ave, 5th Floor
@@ -112,6 +124,7 @@ const Header = () => {
                 className="menu-item relative cursor-pointer"
                 onMouseEnter={() => handleMouseEnter(menu.id)}
                 onMouseLeave={handleMouseLeave}
+                onClick={() => handleMenuItemClick(menu.title)}
               >
                 <a className="tracking-wider duration-500 hover:text-[#4675FF]">
                   {menu.title}
@@ -124,6 +137,7 @@ const Header = () => {
                         <li
                           key={index}
                           className="py-1 px-2 hover:bg-gray-200 hover:cursor-pointer"
+                          onClick={() => handleSubItemClick(subItem)}
                         >
                           {subItem}
                         </li>

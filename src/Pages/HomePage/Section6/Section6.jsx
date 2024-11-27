@@ -1,23 +1,35 @@
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
-import Box from "./Box/Box";
 import "./section6.css";
 import { TiSocialInstagram } from "react-icons/ti";
 import { GrGooglePlus } from "react-icons/gr";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Section6 = () => {
+
+  useEffect(() => {
+        AOS.init({
+            once: false,
+            duration: 2000,
+            easing: "ease-out-cubic",
+        });
+    },[]);
+
+
   return (
     <section
       id="sct6"
       className="sct6 w-full h-[840px] flex justify-center items-center"
     >
-      <div className="sct6-container w-[80%] h-[635px]  flex flex-col justify-between items-center">
-        <h2 className="w-full h-[55px] text-[45px] font-[Montserrat] font-bold  text-center">
+      <div  data-aos-duration="1500" className="sct6-container w-[80%] h-[635px]  flex flex-col justify-between items-center">
+        <h2  className="w-full h-[55px] text-[45px] font-[Montserrat] font-bold  text-center">
           OUR TEAM
         </h2>
 
         <div className="sct6-content w-full h-[520px]  flex flex-wrap justify-between items-center">
 
-          <div className="box-content w-[370px] h-[526px]  flex flex-col justify-between items-center">
+          <div data-aos-duration="2000" data-aos="fade-right" className="box-content w-[370px] h-[526px]  flex flex-col justify-between items-center">
             <div className="  box-img w-[370px] h-[334px] bg-[#FFFFFF]">
               <img
                 className="object-cover hover:scale-105 duration-500 "
@@ -43,7 +55,7 @@ const Section6 = () => {
             </div>
           </div>
 
-          <div className="box-content w-[370px] h-[526px]  flex flex-col justify-between items-center">
+          <div data-aos-duration="2000" data-aos="zoom-out-down"  className="box-content w-[370px] h-[526px]  flex flex-col justify-between items-center">
             <div className="  box-img w-[370px] h-[334px] bg-[#FFFFFF]">
               <img
                 className="object-cover hover:scale-105 duration-500 "
@@ -68,7 +80,7 @@ const Section6 = () => {
             </div>
           </div>
 
-          <div className="box-content w-[370px] h-[526px]  flex flex-col justify-between items-center">
+          <div data-aos-duration="2000" data-aos="fade-left" className="box-content w-[370px] h-[526px]  flex flex-col justify-between items-center">
             <div className="  box-img w-[370px] h-[334px] bg-[#FFFFFF]">
               <img
                 className="object-cover hover:scale-105 duration-500 "

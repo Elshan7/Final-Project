@@ -33,7 +33,7 @@ const Section2 = () => {
   };
 
   return (
-    <section id="sct2" className="sct2 w-full h-[665px] flex justify-center items-end">
+    <section id="sct2" data-aos-duration="3000" data-aos="zoom-in" className="sct2 w-full h-[665px] flex justify-center items-end">
       <div className="sct2-container w-[80%] h-[545px]  flex justify-end ">
         <div className="sct2-rightcontainer w-[50%] h-[545px] ">
           <h2 className=' text-[#151515] font-bold  font-["Montserrat"] mb-3 ml-5'>
@@ -52,7 +52,7 @@ const Section2 = () => {
             {
               value && value.map((item) =>  <div key={item.id}  className="sct2-box w-[522px] h-[164px]  bg-[#FFFFFF] flex justify-center items-center rounded-md mb-5">
               <div className="sct2-subbox w-[482px] h-[104px] flex justify-center items-center">
-                <div className="left-icon w-[90px] h-[84px] ">
+                <div  className="left-icon w-[90px] h-[84px] ">
                   <img className="w-[85px] h-[85px]" src={item.image} alt="" />
 
                 </div>
