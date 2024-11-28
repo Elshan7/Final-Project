@@ -53,6 +53,12 @@ const Header = () => {
     if (subItem === "OUR LOCATION") {
       navigate("/map");
     }
+    if (subItem === "ABOUT US") {
+      navigate("/about");
+    }
+    if (subItem === "OUR SERVICES") {
+      navigate("/service");
+    }
   };
 
   const handleMenuItemClick = (itemTitle) => {
@@ -76,6 +82,8 @@ const Header = () => {
         <div className="nav-mid w-[80%] h-[135x] flex justify-between items-center">
           <div onClick={() => navigate("/")} className="logo cursor-pointer">
             <img
+            data-aos="fade-down"
+            data-aos-duration="1500"
               className="w-[157px] h-[50px]"
               src="https://livedemo00.template-help.com/wt_prod-25548/unit-car-repair/images/logo-default-314x100.png"
               alt="Logo"
@@ -83,9 +91,9 @@ const Header = () => {
           </div>
 
           <div className="nav-mid-text w-[563px] h-[58px] flex">
-            <div className="left-mid w-[313px] h-[58px] flex">
-              <MdLocationPin  className="w-[40.75px] cursor-pointer h-[40px] text-[#cfd0d0] mr-1.5 mt-1" />
-              <div className="unit-body w-[225px] h-[58px]">
+            <div data-aos="fade-down" data-aos-duration="1500" className="left-mid w-[313px] h-[58px] flex">
+              <MdLocationPin onClick={() => navigate("/service")}  className="w-[40.75px] cursor-pointer h-[40px] text-[#cfd0d0] mr-1.5 mt-1" />
+              <div  className="unit-body w-[225px] h-[58px]">
                 <a href="#" className="text-[15px] text-[#151515]">
                   523 Sylvan Ave, 5th Floor
                   <br />
@@ -94,7 +102,7 @@ const Header = () => {
               </div>
             </div>
 
-            <div className="right-mid w-[250px] h-[58px] flex justify-end">
+            <div data-aos="fade-down" data-aos-duration="1500" className="right-mid w-[250px] h-[58px] flex justify-end">
               <MdLocalPhone className="w-[40.75px] cursor-pointer h-[40px] text-[#cfd0d0] mr-3 mt-1" />
               <div className="unit-body2">
                 <a href="tel:#" className="text-[15px] text-[#151515]">

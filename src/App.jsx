@@ -9,6 +9,8 @@ import Map from "./Pages/Map/Map";
 import Search from "./Pages/Search/Search";
 import AdminPanel from "./Pages/AdminPanel/AdminPanel";
 import AdminLogin from "./Pages/AdminLogin/AdminLogin";
+import AboutUs from "./Pages/AboutUs/AboutUs.jsx";
+import CarService from "./Pages/CarService/CarService.jsx";
 
 
 const App = () => {
@@ -27,6 +29,8 @@ const App = () => {
           <Route path="/search" element={<Search />} />
           <Route path="/admin" element={<AdminPanel />} />
           <Route path="/adminlogin" element={<AdminLogin />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/service" element={<CarService />} />
         </Routes>
       </BrowserRouter>
     </>

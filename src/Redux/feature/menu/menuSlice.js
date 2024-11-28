@@ -41,8 +41,6 @@ const initialState = {
     items: [
       'GRID GALLERY',
       'MASONRY GALLERY',
-      'Sony',
-      'Toshiba',
     ]
   },
   {
