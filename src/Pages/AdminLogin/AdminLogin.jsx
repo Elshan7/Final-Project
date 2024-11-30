@@ -42,7 +42,7 @@ const AdminLogin = () => {
         id="adminlogin"
         className="adminlogin-sct w-full h-lvh bg-center bg-cover flex justify-center items-center"
       >
-        <div className="admincontainer w-[450px] h-[550px] bg-black rounded-lg flex justify-center items-center">
+        <div className="admincontainer w-[450px] h-[550px] bg-black border border-amber-400  rounded-lg flex justify-center items-center">
           <form
             action=""
             onSubmit={handleSubmit}
@@ -108,7 +108,7 @@ const AdminLogin = () => {
 
             <button
               disabled={loading}
-              className="button-admin w-[390px] h-[50px] bg-slate-400 rounded-3xl text-white text-[16px] border-none cursor-pointer"
+              className="button-admin w-[310px] h-[45px] ml-5  bg-sky-800 rounded-3xl text-white text-[16px] border-none cursor-pointer"
             >
               {loading ? "Logging in..." : "LOGIN"}
             </button>

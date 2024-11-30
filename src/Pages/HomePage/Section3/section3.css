@@ -27,6 +27,14 @@
     z-index: 2;
     overflow: hidden;
     cursor: pointer;
+    transition: 0.7s;
+}
+
+#sct3 h2:hover {
+  background-color: transparent;
+  color: black;
+  font-weight: bold;
+  font-size: 28px;
 }
 
 

@@ -1,9 +1,10 @@
 .login-sct {
-  background-image: url(https://wallpapers.com/images/hd/plain-black-with-wooden-pattern-09v7n22juf06luep.jpg);
+  background-image: url(https://i.pinimg.com/originals/7f/6a/35/7f6a35ff2444a468a0ca0dd27256127d.jpg);
 }
 
 #login .container {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border: 2px solid black;
 }
 
 #login label , #login input , #login .forgot a , #login .text1 {

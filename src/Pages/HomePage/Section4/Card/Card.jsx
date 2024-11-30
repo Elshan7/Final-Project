@@ -8,6 +8,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Rating } from "@mui/material";
 
+
+
+
 const Card = ({ item }) => {
   const dispatch = useDispatch();
   const basket = useSelector((state) => state.basket.items);
@@ -24,7 +27,7 @@ const Card = ({ item }) => {
 
   const handleAddToCart = () => {
     if (basket.some((existingItem) => existingItem.id === item.id)) {
-      alert("Item is already in the basket!");
+      alert("Item is in already in the cart");
       return;
     }
 
@@ -41,7 +44,7 @@ const Card = ({ item }) => {
 
 
   return (
-    <div className="card-content w-[300px] h-[478px] flex flex-col items-center justify-between">
+    <div className="card-content duration-700 w-[300px] h-[478px] flex flex-col items-center justify-between hover:scale-105">
       <div className="card-img w-[298px] h-[270px] relative">
         <img
           onClick={() => navigate(`/detail/${item.id}`)}
@@ -66,7 +69,7 @@ const Card = ({ item }) => {
 
         <button
           onClick={handleAddToCart}
-          className={`card-btn py-[10px] px-[30px] mt-3 text-white text-[15px] flex items-center justify-center gap-2 ${
+          className={`card-btn py-[10px] px-[30px] mt-3 text-white text-[15px]  flex items-center justify-center gap-2 hover:bg-black hover:text-white ${
             buttonState ? "bg-green-500" : "bg-[#E53E29]"
           } transition-all`}
         >

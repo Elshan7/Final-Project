@@ -39,7 +39,7 @@ const VideoPage = () => {
 
   return (
     <>
-      {/* Render Header only if no video is active */}
+   
       {!activeVideo && <Header />}
 
       <div className="min-h-screen flex flex-col items-center p-4">
@@ -55,11 +55,11 @@ const VideoPage = () => {
                   src={video.thumbnail}
                   alt={video.title}
                   className="w-full rounded-md cursor-pointer"
-                  onClick={() => handleThumbnailClick(video)} // This will set the video to be active when clicked
+                  onClick={() => handleThumbnailClick(video)} 
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <button
-                    onClick={() => handleThumbnailClick(video)} // Same as clicking on the image
+                    onClick={() => handleThumbnailClick(video)} 
                     className="bg-white p-3 rounded-full shadow-lg opacity-80 hover:opacity-100"
                   >
                     <svg
@@ -109,7 +109,6 @@ const VideoPage = () => {
         )}
       </div>
 
-      {/* Render Footer only if no video is active */}
       {!activeVideo && <Footer />}
     </>
   );

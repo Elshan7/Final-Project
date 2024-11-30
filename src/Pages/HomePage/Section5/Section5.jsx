@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import  { useRef, useEffect, useState } from 'react';
 import CountUp from 'react-countup';
 import './section5.css';
 import { FaUserTie } from 'react-icons/fa6';

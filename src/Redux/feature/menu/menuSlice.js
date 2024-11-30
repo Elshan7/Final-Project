@@ -7,10 +7,9 @@ const initialState = {
     items: [
       'WHY CHOOSE US',
       'OUR SERVICES',
-      'ALL PRODUCTS',
+      'POPULAR PRODUCTS',
       'STATISTICS',
       'OUR TEAM',
-      'OUR LOCATION'
     ]
   },
   {
@@ -21,14 +20,13 @@ const initialState = {
       'WHAT WE OFFER',
       'OUR TEAM',
       'TESTIMONIALS',
-      'HUAWEI'
     ]
   },
   {
     id: 3,
     title: "SHOP",
     items: [
-      'CAR LIGHTS',
+      'OUR PRODUCTS',
       'WHEELS',
       'ENGINE',
       'CAR MIRROR',
@@ -48,10 +46,6 @@ const initialState = {
     title: "CONTACT US",
     items: [
       'OUR LOCATION',
-      'GRID GALLERY',
-      'MASONRY GALLERY',
-      'Sony',
-      'Toshiba',
     ]
   }],
   activeItem: null

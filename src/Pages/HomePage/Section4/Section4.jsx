@@ -18,15 +18,15 @@ const Section4 = () => {
   };
 
   return (
-    <section data-aos="zoom-in" data-aos-duration="1500" className=" sct4 w-full h-[1700px] bg-[#F2F2F2] flex justify-center items-center  mt-8">
+    <section  className=" sct4 w-full h-auto bg-[#F2F2F2] flex justify-center items-center  mt-8">
 
-      <div className="sct4-content w-[90%] h-[1645px]  flex flex-col justify-start items-center ">
+      <div className="sct4-content w-[90%] h-auto my-4 flex flex-col justify-start items-center  ">
 
-        <div className="sct4-title w-full">
+        <div className="sct4-title w-full my-2">
           <h2 className="sct4-h2">POPULAR PRODUCTS</h2>
         </div>
 
-        <div className="sct4-container w-full h-[1130px]  flex flex-col justify-between">
+        <div data-aos="zoom-in" data-aos-duration="1500" className="sct4-container  w-full h-auto  flex flex-col justify-between">
           <div className="sct4-headings w-full h-[45px]  flex justify-center items-center gap-5">
             <button onClick={() => handleButtonClick("allProducts")} className=" duration-700 p-2 rounded-lg hover:opacity-60 ">All Products</button>
             <button onClick={() => handleButtonClick("carLights")}className=" duration-700 p-2 rounded-lg hover:opacity-60">Car Lights</button>
@@ -34,7 +34,7 @@ const Section4 = () => {
             <button onClick={() => handleButtonClick("otherParts")} className=" duration-700 p-2 rounded-lg hover:opacity-60">Other parts</button>
           </div>
 
-          <div className="sct4-cards w-full h-[1056px] flex justify-center flex-wrap gap-6">
+          <div className="my-4 sct4-cards w-full h-auto flex justify-center flex-wrap gap-6 ">
             {active === "allProducts" &&
               value.map((item) => <Card key={item.id} item={item} />)}
 

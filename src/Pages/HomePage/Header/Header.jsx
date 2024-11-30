@@ -52,20 +52,29 @@ const Header = () => {
   const { totalLength2 } = useSelector((item) => item.favorite);
 
   const handleSubItemClick = (subItem) => {
-    if (subItem === "OUR LOCATION") {
-      navigate("/map");
-    }
     if (subItem === "ABOUT US") {
       navigate("/about");
     }
-    if (subItem === "OUR SERVICES") {
+    if (subItem === "WHAT WE OFFER") {
       navigate("/service");
+    }
+    if (subItem === "OUR PRODUCTS") {
+      navigate("/search");
+    }
+    if (subItem === "WHEELS") {
+      navigate("/search");
+    }
+    if (subItem === "ENGINE") {
+      navigate("/search");
     }
   };
 
   const handleMenuItemClick = (itemTitle) => {
     if (itemTitle === "HOME") {
       navigate("/");
+    }
+    if (itemTitle === "CONTACT US") {
+      navigate("/map");
     }
   };
 
@@ -127,19 +136,7 @@ const Header = () => {
               />
             </Badge>
           </div>
-          {/* <button className="drawer-btn" type="primary" onClick={showDrawer}>
-          <FaBarsStaggered className="text-3xl" />
-          </button>
-
-          <div onClick={() => navigate("/")} className="logo cursor-pointer">
-            <img
-              data-aos="fade-down"
-              data-aos-duration="1500"
-              className="w-[157px] h-[50px] header-logo"
-              src="https://livedemo00.template-help.com/wt_prod-25548/unit-car-repair/images/logo-default-314x100.png"
-              alt="Logo"
-            />
-          </div> */}
+    
 
           <div className="nav-mid-text w-[563px] h-[58px] flex">
             <div
@@ -148,7 +145,6 @@ const Header = () => {
               className="left-mid w-[313px] h-[58px] flex"
             >
               <MdLocationPin
-                onClick={() => navigate("/service")}
                 className="w-[40.75px] cursor-pointer h-[40px] text-[#cfd0d0] mr-1.5 mt-1"
               />
               <div className="unit-body w-[225px] h-[58px]">
@@ -297,81 +293,3 @@ const Header = () => {
 export default Header;
 
 
-
-
-
-
-
-
-
-// const [subItem, setSubItem] = useState(false);
-
-// const subItemClick = () => {
-//   setSubItem(true);
-// };
-
-{
-  /* <nav className="flex justify-between items-center">
-            <ul className="menu   flex flex-col gap-4 w-[555px] text-black">
-              <li>
-                <span onClick={subItemClick}>Home</span>
-                <ul
-                  className={
-                    subItem === true
-                      ? "subitem-ul-active flex flex-col gap-4"
-                      : "subitem-ul"
-                  }
-                >
-                  <li>
-                    <a href="">WHY CHOOSE US</a>
-                  </li>
-                  <li>
-                    <a href="">OUR SERVICES</a>
-                  </li>
-                  <li>
-                    <a href="">ALL PRODUCTS</a>
-                  </li>
-                  <li>
-                    <a href="">STATISTICS</a>
-                  </li>
-                  <li>
-                    <a href="">OUR TEAM</a>
-                  </li>
-                  <li>
-                    <a href="">OUR LOCATION</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <span onClick={subItemClick}>PAGES</span>
-                <ul
-                  className={
-                    subItem === true
-                      ? "subitem-ul-active flex flex-col gap-4"
-                      : "subitem-ul"
-                  }
-                >
-                  <li>
-                    <a href="">ABOUT US</a>
-                  </li>
-                  <li>
-                    <a href="">WHAT WE OFFER</a>
-                  </li>
-                  <li>
-                    <a href="">OUR TEAM</a>
-                  </li>
-                  <li>
-                    <a href="">WHAT WE OFFER</a>
-                  </li>
-                  <li>
-                    <a href="">OUR TEAM</a>
-                  </li>
-                
-                </ul>
-              </li>
-
-
-            </ul>
-          </nav> */
-}

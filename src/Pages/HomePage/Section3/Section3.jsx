@@ -8,9 +8,9 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const Section3 = () => {
   return (
-    <section data-aos-duration="2000" data-aos="flip-left" id="sct3" className=' sct3 w-full h-[470px] '>
+    <section  id="sct3" className=' sct3 w-full h-[470px]  '>
 
-        <h2 className="sct3-h2 font-[Montserrat] text-[40px] font-bold mt-4">OUR SERVICES</h2>
+        <h2 className="sct3-h2 font-[Montserrat] text-[40px] font-bold mt-4  ">OUR SERVICES</h2>
 
 <Swiper 
         slidesPerView={3}
@@ -19,6 +19,7 @@ const Section3 = () => {
           clickable: true,
         }}
         modules={[Pagination]}
+        data-aos-duration="2000" data-aos="flip-left"
         className="mySwiper sct3-swiper w-full sct3-slide h-[411px]"
       >
         <SwiperSlide className="sct3-slide flex sct3-swiper justify-between items-center">
