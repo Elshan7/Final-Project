@@ -23,7 +23,7 @@ const Section6 = () => {
       className="sct6 w-full h-[840px] flex justify-center items-center"
     >
       <div  data-aos-duration="1500" className="sct6-container w-[80%] h-[635px]  flex flex-col justify-between items-center">
-        <h2  className="w-full h-[55px] text-[45px] font-[Montserrat] font-bold  text-center">
+        <h2  className="w-full h-[55px] sct6-h2 text-[45px] font-[Montserrat] font-bold  text-center">
           OUR TEAM
         </h2>
 
@@ -42,7 +42,7 @@ const Section6 = () => {
               <h5 className="text-center font-[Montserrat] text-[20px] text-[#151515] font-bold tracking-wide">
                 John Smith
               </h5>
-              <p className="text-center text-[#777777]">
+              <p className="sct6-desct text-center text-[#777777]">
                 John Smith is AutoPoint’s lead technician & the company’s
                 initial founder.
               </p>

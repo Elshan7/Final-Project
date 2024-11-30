@@ -1,5 +1,7 @@
 #signup .left-side {
-      background-image: url(https://colorlib.com/etc/lf/Login_v13/images/bg-01.jpg);
+    background-position: center;
+    background-size: cover;
+      background-image: url(https://media.istockphoto.com/id/1387759698/photo/hand-of-car-mechanic-with-wrench-auto-repair-garage-mechanic-works-on-the-engine-of-the-car.jpg?s=612x612&w=0&k=20&c=JVYyKMvP-NN-bTMyIF-pNrifwvjyjKcIRjTVEmSmPsM=)
   }
   
   
@@ -38,4 +40,132 @@
       color: red;
       font-size: 14px;
       margin-top: 4px;
+  }
+
+  @media (max-width: 1500px) {
+    .signup-sct , .right-side , .left-side {
+        height: auto;
+
+    }
+
+    .signup-form {
+        height: auto;
+    }
+
+    .h2-text {
+        height: auto;
+    }
+
+  }
+
+  @media (max-width: 1100px) {
+    .left-side {
+        width: 50%;
+
+    }
+
+  .right-side {
+    width: 50%;
+
+ }
+  }
+
+  @media (max-width: 860px) {
+    .left-side {
+        width: 40%;
+
+    }
+
+  .right-side {
+    width: 60%;
+    background-color: transparent;
+
+ }
+  }
+
+
+  @media (max-width: 730px) {
+    .left-side {
+        width: 30%;
+
+    }
+
+  .right-side {
+    width: 70%;
+
+ }
+  }
+
+
+  @media (max-width: 640px) {
+    .left-side {
+        width: 20%;
+
+    }
+
+  .right-side {
+    width: 80%;
+ }
+  }
+
+
+  @media (max-width: 530px) {
+    .left-side {
+        width: 5%;
+
+    }
+
+  .right-side {
+    width: 95%;
+ }
+  }
+
+
+  @media (max-width: 460px) {
+    .left-side {
+        width: 0;
+
+    }
+
+  .right-side {
+    width: 100%;
+ }
+
+ .signup-form {
+    width: 330px !important;
+
+ }
+
+ .h2-textUp  {
+    text-align: center;
+    margin-top: 10px;
+    width: 300px;
+ }
+
+ .registerBody {
+    width: 300px;
+ }
+
+ .input-group2 {
+    width: 320px !important;
+ }
+
+ .label2 , .input2 {
+    width: 300px !important;
+ }
+
+ .terms {
+    width: 300px !important;
+ }
+
+ .container-loginn {
+    width: 300px !important;
+   
+    gap: 5px;
+ }
+
+ .firstBtn {
+    width: 160px !important;
+ }
+
   }

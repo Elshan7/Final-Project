@@ -6,6 +6,7 @@ import { deleteFromBasket } from "../../Redux/feature/basket/basketSlice";
 import { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { RxDotFilled } from "react-icons/rx";
+import "./AddToChart.css"
 
 const AddToChart = () => {
   const basketItems = useSelector((state) => state.basket.items);
@@ -51,21 +52,21 @@ const AddToChart = () => {
 
       <section className="cart-sct my-3">
         <div className="basket-title w-full h-[40px]  flex justify-start bg-slate-300">
-          <ul className="flex justify-around w-[70%] ">
-            <li className="w-[300px]  flex justify-center items-center ">
-              <a  className="text-xl font-semibold flex items-center" href=""><RxDotFilled />Product</a>
+          <ul className="baskett-ul flex justify-around w-[80%]  ">
+            <li className="w-[300px]  flex justify-center items-center  ">
+              <a  className="cart-a text-xl font-semibold flex items-center" href=""><RxDotFilled />Product</a>
             </li>
-            <li className="w-[200px]  flex justify-center items-center">
-              <a className="text-xl font-semibold flex items-center" href=""><RxDotFilled />Title</a>
+            <li className="w-[150px]  flex justify-center items-center">
+              <a className="cart-a text-xl font-semibold flex items-center" href=""><RxDotFilled />Title</a>
             </li>
-            <li className="w-[100px]  flex justify-center items-center">
-              <a className="text-xl font-semibold flex items-center" href=""><RxDotFilled />Price</a>
+            <li className="w-[150px]  flex justify-center items-center">
+              <a className="cart-a text-xl font-semibold flex items-center" href=""><RxDotFilled />Price</a>
             </li>
-            <li className=" flex justify-center items-center w-[100px] ">
-              <a className="text-xl font-semibold flex items-center" href=""><RxDotFilled />Quantity</a>
+            <li className="  flex justify-center items-center w-[150px] ">
+              <a className=" cart-atext-xl font-semibold flex items-center" href=""><RxDotFilled />Quantity</a>
             </li>
             <li className="flex justify-center items-center w-[100px]  ">
-              <a className="text-xl font-semibold flex items-center" href=""><RxDotFilled />Price</a>
+              <a className=" cart-a cart-a text-xl font-semibold flex items-center" href=""><RxDotFilled />SUM</a>
             </li>
           </ul>
         </div>
@@ -82,12 +83,12 @@ const AddToChart = () => {
                 className="basket w-full h-auto  flex justify-center items-center shadow-md "
               >
                 <div className="basket-container w-[95%] h-[90%] flex my-1">
-                  <div className="basket-content w-[75%] h-auto rounded-md ">
+                  <div className="basket-content  w-[85%] h-auto rounded-md ">
                     <div className="basket-detail w-full h-auto flex items-center justify-between  ">
 
                       <div className="img-div w-[323px] h-[270px] flex justify-around items-center  ">
                         <img
-                          className="w-[320px] h-[270px] object-contain"
+                          className="basketimg w-[320px] h-[270px] object-contain"
                           src={item.image || "/path/to/default-image.jpg"} 
                           alt={item.title || "Product"} 
                         />
@@ -95,14 +96,14 @@ const AddToChart = () => {
                       </div>
 
                       <div className="title w-[200px] h-[270px]  flex items-center">
-                      <p className="text-xl">{item.title}</p>
+                      <p className="basket-titlee text-xl">{item.title}</p>
                       </div>
 
-                      <div className="price w-[90px] h-[250px] flex items-center  ">
+                      <div className="price w-[110px] h-[250px] flex items-center justify-center   ">
                         <span className=" text-xl">$ {item.newPrice}</span>
                       </div>
 
-                      <div className=" text-xl quantity w-[100px] h-[250px] flex items-center justify-center">
+                      <div className=" text-2xl quantity  w-[200px] h-[250px] flex items-center justify-center">
                         <button
                           onClick={() => handleDecrement(index)}
                           className="border w-5 h-5 flex items-center justify-center"
@@ -118,7 +119,7 @@ const AddToChart = () => {
                         </button>
                       </div>
 
-                      <div className="text-xl total-price w-[100px] h-[250px] flex justify-center items-center">
+                      <div className="text-xl total-price w-[80px] h-[250px] flex justify-center items-center">
                         <span>
                           ${(item.newPrice * quantities[index]).toFixed(2)}
                         </span>
@@ -126,7 +127,7 @@ const AddToChart = () => {
 
                       <MdDelete
                         onClick={() => handleDeleteFromCart(item)}
-                        className="w-8 h-13 cursor-pointer duration-700 text-[25px] hover:text-red-500"
+                        className="w-8 ml-5 h-13 cursor-pointer duration-700 text-[28px] hover:text-red-500"
                       />
 
                     </div>
@@ -141,9 +142,9 @@ const AddToChart = () => {
 
         
         {basketItems.length > 0 && (
-          <div className="total-amount w-[71%] flex justify-end my-5 ">
-            <div className="text-xl font-semibold flex justify-center items-center  w-80">
-              <span className="mr-3 text-2xl">Total Amount: </span>
+          <div className="total-amount  w-[80%] flex justify-end my-5 ">
+            <div className="text-xl bg-slate-200  font-semibold flex justify-center items-center  w-80">
+              <span className="mr-3  text-2xl">Total Amount: </span>
               <span className="text-2xl">${calculateTotal().toFixed(2)}</span>
             </div>
           </div>

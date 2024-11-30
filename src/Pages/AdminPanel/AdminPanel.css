@@ -1,0 +1,23 @@
+@media (max-width: 650px) {
+    .admin-input {
+        width: 300px;
+       
+    }
+
+    .input-search {
+        width: 300px;
+    }
+
+}
+
+@media (max-width: 450px) {
+    .admin-input {
+        width: 150px;
+       
+    }
+
+    .input-search {
+        width: 300px;
+    }
+
+}

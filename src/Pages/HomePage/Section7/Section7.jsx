@@ -1,4 +1,5 @@
-import React from 'react'
+
+import './section7.css';
 
 const Section7 = () => {
   return (

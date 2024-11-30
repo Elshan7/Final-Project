@@ -13,31 +13,31 @@ const Footer = () => {
       <div className="footer-up w-full h-[402px] flex justify-center items-center">
         <div className="footer-up-container w-[80%] h-[273px] flex ">
           <div data-aos="zoom-in-down" className="footer-part1 w-[33.3%] h-[273px] ">
-            <h5 className="font-[Montserrat] text-[20px] text-[#FFF] duration-700 cursor-pointer tracking-wide font-bold hover:text-blue-600 hover:ml-2">
+            <h5 className="footer-h5 font-[Montserrat] text-[20px] text-[#FFF] duration-700 cursor-pointer tracking-wide font-bold hover:text-blue-600 hover:ml-2">
               OUR CONTACTS
             </h5>
-            <div className="line w-[25%] h-[2.4px] mt-4"></div>
+            <div className="part1-line line w-[25%] h-[2.4px] mt-4"></div>
 
-            <ul className="w-full h-[128px] flex flex-col mt-5 ">
-              <li className="h-[58px] w-[70%]  flex items-center ">
+            <ul className="part1-ul w-full h-[128px] flex flex-col mt-5 ">
+              <li className="part1-li h-[58px] w-[70%]  flex items-center ">
                 <IoLocationSharp className="location w-[40px] h-[40px] " />
-                <a className="w-[225px] h-[48px]  ml-1 text-[#FFFFFF]" href="">
+                <a className="part1-a w-[225px] h-[48px]  ml-1 text-[#FFFFFF]" href="">
                   523 Sylvan Ave, 5th Floor <br />
                   Mountain View, CA 94041 USA
                 </a>
               </li>
 
-              <li className="h-[58px] w-[70%]  mt-6 flex items-center">
+              <li className="part1-li h-[58px] w-[70%]  mt-6 flex items-center">
                 <FaRegClock className="clock w-[36px] h-[36px]" />
                 <div className="li-sub w-[225px] h-[48px] ml-2 text-[#FFFFFF]">
                   <div className="up-li">
                     <span>Weekdays:</span>{" "}
-                    <span className="ml-2">08:00am - 08:00pm</span>
+                    <span className="ml-1">08:00am - 08:00pm</span>
                   </div>
 
                   <div className="down-li">
                     <span>Weekends:</span>{" "}
-                    <span className="ml-2">10:00am - 06:00pm</span>
+                    <span className="ml-1">10:00am - 06:00pm</span>
                   </div>
                 </div>
               </li>
@@ -45,10 +45,10 @@ const Footer = () => {
           </div>
 
           <div data-aos="zoom-in-down"  className="footer-part2 w-[33.3%] h-[273px] ">
-            <h5 className="font-[Montserrat] text-[20px] cursor-pointer duration-700 text-[#FFF] tracking-wide font-bold hover:text-blue-600 hover:ml-2 ">
+            <h5 className="footer-h5 font-[Montserrat] text-[20px] cursor-pointer duration-700 text-[#FFF] tracking-wide font-bold hover:text-blue-600 hover:ml-2 ">
               QUICK LINKS
             </h5>
-            <div className="line w-[25%] h-[2.4px] mt-4 "></div>
+            <div className="line w-[25%] h-[2.4px] mt-5 "></div>
 
             <ul className="w-[250px] h-[156px]  flex mt-5  ">
               <div className="li-left w-[50%] h-156px text-white  flex flex-col justify-between">
@@ -132,7 +132,7 @@ const Footer = () => {
           </div>
 
           <div data-aos="zoom-in-down" className="footer-part3 w-[33.3%] h-[273px] ">
-            <h5 className="font-[Montserrat] text-[20px] text-[#FFF] duration-700 cursor-pointer tracking-wide font-bold hover:text-blue-600 hover:ml-2">
+            <h5 className="footer-h5 font-[Montserrat] text-[20px] text-[#FFF] duration-700 cursor-pointer tracking-wide font-bold hover:text-blue-600 hover:ml-2">
               GET IN TOUCH
             </h5>
             <div className="line w-[25%] h-[2.4px] mt-4 "></div>
@@ -146,7 +146,7 @@ const Footer = () => {
               </button>
               <a
                 href="/map"
-                className="text-white underline underline-offset-8 ml-4 decoration-2 duration-700 hover:text-[#1e52e8]"
+                className="text-white map-link underline underline-offset-8 ml-4 decoration-2 duration-700 hover:text-[#1e52e8]"
               >
                 VIEW ON MAP
               </a>

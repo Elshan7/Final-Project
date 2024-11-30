@@ -1,0 +1,13 @@
+@media (max-width:570px) {
+    .detail-img {
+        object-fit: contain;
+    }
+
+    .strong-text {
+        font-size: 16px;
+    }
+
+    
+   
+
+}

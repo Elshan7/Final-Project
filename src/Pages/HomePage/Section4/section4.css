@@ -71,3 +71,39 @@
     z-index: 0;
 }
 
+@media (max-width:992px) {
+
+   
+    .sct4 , .sct4-content , .sct4-container , .sct4-cards {
+        height: auto;
+    }
+
+    .sct4-cards {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .sct4-title {
+        margin-top: 1rem;
+    }
+    
+}
+
+@media (max-width:1416px) {
+
+   
+    .sct4 , .sct4-content , .sct4-container , .sct4-cards {
+        height: auto;
+    }
+
+    .sct4-cards {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .sct4-title {
+        margin-top: 1rem;
+    }
+    
+}
+

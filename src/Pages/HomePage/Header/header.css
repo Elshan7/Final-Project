@@ -95,3 +95,31 @@
   font-size: 22px;
   cursor: pointer;
 }
+
+@media (max-width:992px) {
+
+  header {
+    width: 100%;
+    height: 110px !important ;
+  }
+
+  .header-up , .header-down , .left-mid , .right-mid {
+    display: none;
+  }
+
+  .header-mid {
+    height: 70px;
+  }
+
+  .nav-mid {
+    width: 70%;
+  }
+
+  .header-logo {
+    width: 170px;
+    height: 50px;
+    object-fit: contain;
+  }
+
+ 
+}

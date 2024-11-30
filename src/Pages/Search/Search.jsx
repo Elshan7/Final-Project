@@ -53,7 +53,7 @@ const Search = () => {
 
       <section className="w-full h-auto  flex flex-col items-center my-5">
      
-        <div className="w-[90%] flex justify-between items-center p-4">
+        <div className="filter-search w-[87%] flex justify-between items-center p-4">
           <input
             type="text"
             placeholder="Search by title..."

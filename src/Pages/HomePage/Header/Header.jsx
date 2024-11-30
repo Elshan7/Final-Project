@@ -84,7 +84,7 @@ const Header = () => {
             <img
             data-aos="fade-down"
             data-aos-duration="1500"
-              className="w-[157px] h-[50px]"
+              className="w-[157px] h-[50px] header-logo"
               src="https://livedemo00.template-help.com/wt_prod-25548/unit-car-repair/images/logo-default-314x100.png"
               alt="Logo"
             />
@@ -180,6 +180,8 @@ const Header = () => {
           </div>
         </nav>
       </div>
+
+      
     </header>
   );
 };

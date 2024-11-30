@@ -28,4 +28,90 @@
     background-color: black;
     transition: 1s;
   }
+
+  @media (max-width:1496px) {
+
+    .admin-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+   
+  }
+
+  @media (max-width:700px) {
+    .adminlogin-sct {
+      height: auto;
+    }
+
+    .admincontainer {
+      height: auto;
+      width: 350px;
+      height: 450px;
+    }
+
+    .admin-form {
+      width: 290px;
+      height: 360px;
+    }
+
+    .admin-h2 {
+      width: 290px;
+      height: 35px;
+      font-size: 29px;
+    }
+
+    .input-group-admin  {
+      width: 270px;
+      height: 50px;
+    }
+
+    .forgot {
+      width: 270px;
+      margin-top: 1rem;
+    }
+
+    .button-admin {
+      width: 270px;
+      height: 40px;
+    }
+
+  }
+
+  @media (max-width:400px) {
+
+    .admincontainer {
+      height: auto;
+      width: 320px;
+      height: 420px;
+    }
+
+    .admin-form {
+      width: 260px;
+      height: 330px;
+    }
+
+    .admin-h2 {
+      width: 260px;
+      height: 30px;
+      font-size: 27px;
+    }
+
+    .input-group-admin  {
+      width: 240px;
+      height: 40px;
+    }
+
+    .forgot {
+      width: 240px;
+      margin-top: 1rem;
+    }
+
+    .button-admin {
+      width: 240px;
+      height: 30px;
+    }
+
+
+  }
   

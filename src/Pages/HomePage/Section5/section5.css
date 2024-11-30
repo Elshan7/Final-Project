@@ -6,4 +6,70 @@
     
 }
 
+@media (max-width:992px) {
+
+   
+
+    .sct5 , .sct5-content {
+         height: auto;
+         flex-wrap: wrap;
+    }
+
+    .sct5-content {
+        flex-wrap: wrap;
+        margin: 1rem 0;
+    }
+
+    .sct5-part {
+        width: 50%;
+        flex-wrap: wrap;
+    }
+
+    .sct5-span {
+        font-size: 16px;
+    }
+
+    .sct5-count {
+        font-size: 38px;
+    }
+
+    .sct5-part {
+        margin-top: 1rem;
+    }
+
+}
+
+@media (max-width:820px) {
+
+    
+    .sct5-count {
+        font-size: 35px;
+    }
+
+}
+
+@media (max-width:600px) {
+    .sct5-content {
+        width: 100%;
+        display: flex;
+        
+        flex-wrap: wrap;
+
+    }
+
+
+    .sct5-part {
+        width: 100%;
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    
+    .sct5-count {
+        font-size: 30px;
+    }
+
+}
+
 

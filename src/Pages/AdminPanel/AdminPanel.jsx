@@ -6,6 +6,7 @@ import { MdDelete } from "react-icons/md";
 import NestedModal from "../../components/NestedModal/NestedModal";
 import UserModal from "../../components/UserModal/UserModal";
 import { deleteUser,  fetchUsers } from "../../Redux/feature/login/loginSlice";
+import "./AdminPanel.css"
 
 const AdminPanel = () => {
   const [selectedPage, setSelectedPage] = useState("Dashboard");
@@ -63,17 +64,15 @@ const AdminPanel = () => {
           <div className="p-6 w-full flex justify-center items-center flex-col gap-4">
             <h1 className="text-3xl font-bold mb-6">ALL Products</h1>
 
-            <div className="mb-6 flex justify-center items-center w-[600px]">
+            <div className="input-search mb-6 flex justify-center items-center w-[600px]">
               <input
                 type="text"
                 placeholder="Please enter product name"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="p-2 w-[80%] border border-gray-300 rounded-l-md focus:outline-none focus:ring focus:ring-gray-300"
+                className="admin-input p-2 w-[80%] border border-gray-300 rounded-l-md focus:outline-none focus:ring focus:ring-gray-300"
               />
-              <button className="p-2 w-[20%] bg-black text-white rounded-r-md hover:bg-gray-800">
-                Search
-              </button>
+            
             </div>
 
             <div className="overflow-x-auto w-[60%]">
@@ -152,9 +151,7 @@ const AdminPanel = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="p-2 w-[80%] border border-gray-300 rounded-l-md focus:outline-none focus:ring focus:ring-gray-300"
               />
-              <button className="p-2 w-[20%] bg-black text-white rounded-r-md hover:bg-gray-800">
-                Search
-              </button>
+            
             </div>
 
             <div className="overflow-x-auto w-[60%]">

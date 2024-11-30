@@ -8,6 +8,7 @@ import { FaShoppingBasket } from "react-icons/fa";
 import { addToBasket } from "../../Redux/feature/basket/basketSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Carousel from "../../components/Carousel/Carousel";
+import "./DetailPage.css"
 
 const DetailPage = () => {
   const { id } = useParams();
@@ -93,11 +94,11 @@ const DetailPage = () => {
 
       <div className="container mx-auto p-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white p-6 rounded-lg shadow-lg">
-          <div className="left-side">
+          <div className="left-side detail-img">
             <img
               src={product.image}
               alt={product.title}
-              className="w-full h-[500px] rounded-lg object-cover"
+              className="detail-img w-full h-[500px] rounded-lg object-cover"
             />
             <div className="detail-img grid grid-cols-3 gap-2">
               <div className="swiper-container col-span-3 mt-5">
@@ -150,10 +151,10 @@ const DetailPage = () => {
             </div>
 
             <div className="flex items-center space-x-4 mt-6">
-              <div className="flex items-center border w-44 h-12 justify-center rounded-lg">
+              <div className="quantity-btn flex items-center border w-44 h-12 justify-center rounded-lg">
                 <button
                   onClick={handleDecrement}
-                  className="px-4 py-2 hover:bg-gray-100"
+                  className="quantity-btn px-4 py-2 hover:bg-gray-100"
                 >
                   -
                 </button>
@@ -165,14 +166,14 @@ const DetailPage = () => {
                 />
                 <button
                   onClick={handleIncrement}
-                  className="px-4 py-2 text-gray-600 hover:bg-gray-100"
+                  className="quantity-btn px-4 py-2 text-gray-600 hover:bg-gray-100"
                 >
                   +
                 </button>
               </div>
 
               <div className="text-lg">
-                <strong className="text-xl mr-2">Total Price:</strong>{" "}
+                <strong className="strong-text text-xl mr-2">Total Price:</strong>{" "}
                 <span className="text-red-500">
                   ${Number(totalPrice).toFixed(2)}
                 </span>
@@ -182,7 +183,7 @@ const DetailPage = () => {
             <div className="btn-down">
               <button
                 onClick={handleAddToCart}
-                className={`flex justify-center items-center w-56 h-14 text-xl text-white font-semibold rounded-lg transition-all ${
+                className={`btn-down2 flex justify-center items-center w-44 h-14 text-xl text-white font-semibold rounded-lg transition-all ${
                   buttonState ? "bg-green-500" : "bg-red-500 hover:bg-gray-400"
                 }`}
               >

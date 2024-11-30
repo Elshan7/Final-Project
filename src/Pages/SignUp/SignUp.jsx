@@ -2,12 +2,13 @@ import "./SignUp.css";
 import { useEffect } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useFormik } from "formik";
-import { useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { signUpSchema } from "../../assets/schema/signUpSchema";
 import Footer from "../HomePage/Footer/Footer";
-import Header from "../HomePage/Header/Header";
+// import Header from "../HomePage/Header/Header";
 import { useDispatch, useSelector } from "react-redux";
 import { signUpUser } from "../../Redux/feature/user/userSlice";
+
 
 const SignUp = () => {
   const dispatch = useDispatch();
@@ -39,23 +40,35 @@ const SignUp = () => {
     }
   }, [userInfo, navigate]);
 
+
+
+
   return (
     <>
-      <Header />
 
-      <section id="signup" className="w-full h-lvh flex">
+    <div className="logo-home w-full h-16 bg-slate-300  flex justify-center items-center">
+      <div onClick={() => navigate("/")} className="sub-logo w-[90%]  cursor-pointer">
+      <img className="w-[167px] h-[60px] " src="https://livedemo00.template-help.com/wt_prod-25548/unit-car-repair/images/logo-default-314x100.png" alt="" />
+      </div>
+     
+
+    </div>
+     
+
+      <section id="signup" className="signup-sct w-full h-lvh flex  ">
+
         <div className="left-side w-[60%] h-lvh bg-center bg-no-repeat bg-cover"></div>
 
-        <div className="right-side h-lvh w-[40%] bg-slate-50 flex justify-center items-center">
+        <div className="right-side h-lvh w-[40%] bg-slate-50 flex justify-center items-center ">
           <form
             onSubmit={handleSubmit}
-            className="w-[430px] h-lvh flex flex-col justify-center items-center"
+            className="signup-form w-[430px]  h-[750px] flex flex-col justify-center items-center"
           >
-            <h2 className="h2-text w-[420px] h-[86px] font-[Poppins-Bold] text-[39px] text-[#333333] leading-[1.2] text-left">
+            <h2 className="h2-textUp w-[420px] h-[86px] font-[Poppins-Bold] text-[39px] text-[#333333] leading-[1.2] text-left">
               Sign Up
             </h2>
 
-            <div className="flex flex-col gap-6">
+            <div className="flex registerBody flex-col gap-6">
               {/* Full Name */}
               <div className="input-group2">
                 <label className="label2" htmlFor="fullName">
@@ -159,16 +172,16 @@ const SignUp = () => {
             </div>
 
             {/* Terms and Conditions */}
-            <div className="w-[420px] h-[24px] flex gap-4 items-center mt-5">
+            <div className="terms w-[420px] h-[24px] flex gap-4 items-center mt-5">
               <input
-                className="w-[16px] h-[16px] rounded-[2px] bg-[#e6e6e6]"
+                className=" w-[16px] h-[16px] rounded-[2px] bg-[#e6e6e6]"
                 id="term"
                 type="checkbox"
                 name="term"
                 value={values.term}
                 onChange={handleChange}
               />
-              <span className="font-[Poppins-Regular] text-[15px] text-[#999999] leading-[1.4]">
+              <span className=" font-[Poppins-Regular] text-[15px] text-[#999999] leading-[1.4]">
                 I agree to the{" "}
                 <a
                   className="font-[Poppins-Regular] text-[15px] text-[#3c3c3c]"
@@ -181,11 +194,11 @@ const SignUp = () => {
             </div>
 
             {/* Submit Button */}
-            <div className="container-login w-[420px] h-[50px] mt-6 flex justify-between items-center">
+            <div className="container-loginn w-[420px] h-[50px] mt-6 flex justify-between items-center">
               <button
                 type="submit"
                 disabled={loading}
-                className="w-[244px] h-[48px] font-[Poppins-Medium] text-[16px] text-white border-none rounded-[70px] cursor-pointer bg-black"
+                className="w-[224px] firstBtn h-[48px] font-[Poppins-Medium] text-[18px] text-white border-none rounded-[70px] cursor-pointer bg-black"
               >
                 {loading ? "Signing Up..." : "Sign Up"}
               </button>
@@ -193,16 +206,19 @@ const SignUp = () => {
 
               {/* Sign In Link */}
               <div
-                className="w-[137px] h-[42.5px] bg-white flex justify-center items-center gap-3 font-[Poppins-Regular] text-lg text-[#666666]'"
+                className="w-[157px] h-[45px] bg-black rounded-2xl flex justify-center items-center gap-3 font-[Poppins-Regular] text-lg text-[#666666]'"
                 onClick={() => navigate("/login")}
               >
-                <a href="">Sign in </a>
-                <FaArrowRightLong />
+                <a className="text-white text-[18px]" href="">Sign in </a>
+                <FaArrowRightLong className="text-white" />
               </div>
             </div>
           </form>
         </div>
+
       </section>
+
+
       <Footer />
     </>
   );

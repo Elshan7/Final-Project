@@ -25,3 +25,124 @@
   background-color: black;
   transition: 1s;
 }
+
+
+@media (max-width:1500px) {
+
+ 
+  .login-sct {
+    width: 100%;
+    height: auto;
+  }
+
+  #login .container {
+    width: 400px;
+    height: 500px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .loginForm {
+    width: 300px;
+    height: 400px;
+  }
+
+  .loginh2 {
+    width: 290px;
+    height: 50px;
+  }
+
+  .input-group {
+    width: 290px;
+    height: 50px;
+  }
+  .forgot {
+    width: 290px;
+    margin-top: 15px;
+  }
+
+  .loginBtn {
+    width: 290px;
+    height: 35px;
+  }
+
+  .text1 {
+    width: 290px;
+    height: 50px !important;
+  }
+
+  .icons {
+    width: 290px;
+  }
+
+  .lastSign {
+    width: 290px;
+    height: 40px;
+  }
+}
+
+
+@media (max-width:992px) {
+
+ 
+  .login-sct {
+    width: 100%;
+    top: 70px;
+  
+  }
+}
+
+
+@media (max-width:460px) {
+
+ 
+  .login-sct {
+    width: 100%;
+    height: auto;
+  }
+
+  #login .container {
+    width: 340px;
+    height: 460px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .loginForm {
+    width: 260px;
+    height: 360px;
+  }
+
+  .loginh2 {
+    width: 250px;
+    height: 45px;
+  }
+
+  .input-group {
+    width: 250px;
+    height: 45px;
+  }
+  .forgot {
+    width: 250px;
+    margin-top: 13px;
+  }
+
+  .loginBtn {
+    width: 250px;
+    height: 30px;
+  }
+
+  .text1 {
+    width: 250px;
+    height: 45px !important;
+  }
+
+  .icons {
+    width: 250px;
+  }
+
+  .lastSign {
+    width: 250px;
+    height: 40px;
+  }
+}

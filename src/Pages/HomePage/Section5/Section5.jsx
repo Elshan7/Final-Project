@@ -40,8 +40,8 @@ const Section5 = () => {
             <FaUserTie className='text-[50px] text-[white]' />
           </div>
           <div className="sct5-info flex flex-col items-center">
-            {inView && <CountUp start={0} end={956} duration={2.5} className='block font-[Rajdhani] text-[48px] h-[60px] text-[white] font-bold' />}
-            <span className='text-[18px] font-semibold font-[Rajdhani] text-[white]'>HAPPY CLIENTS</span>
+            {inView && <CountUp start={0} end={956} duration={2.5} className='sct5-count block font-[Rajdhani] text-[48px] h-[60px] text-[white] font-bold' />}
+            <span className='text-[18px] sct5-span font-semibold font-[Rajdhani] text-[white]'>HAPPY CLIENTS</span>
           </div>
         </div>
 
@@ -50,8 +50,8 @@ const Section5 = () => {
             <CgShoppingCart className='text-[50px] text-[white]' />
           </div>
           <div className="sct5-info flex flex-col items-center">
-            {inView && <CountUp start={0} end={1320} duration={2.5} className='block font-[Rajdhani] text-[48px] h-[60px] text-[white] font-bold' />}
-            <span className='text-[18px] font-semibold font-[Rajdhani] text-[white]'>PRODUCTS IN STOCK</span>
+            {inView && <CountUp start={0} end={1320} duration={2.5} className='block sct5-count font-[Rajdhani] text-[48px] h-[60px] text-[white] font-bold' />}
+            <span className='text-[18px] sct5-span font-semibold font-[Rajdhani] text-[white]'>PRODUCTS IN STOCK</span>
           </div>
         </div>
 
@@ -60,8 +60,8 @@ const Section5 = () => {
             <FaAward className='text-[50px] text-[white]' />
           </div>
           <div className="sct5-info flex flex-col items-center">
-            {inView && <CountUp start={0} end={100} duration={2.5} className='block font-[Rajdhani] text-[48px] h-[60px] text-[white] font-bold' />}
-            <span className='text-[18px] font-semibold font-[Rajdhani] text-[white]'>AWARDS</span>
+            {inView && <CountUp start={0} end={100} duration={2.5} className='block sct5-count font-[Rajdhani] text-[48px] h-[60px] text-[white] font-bold' />}
+            <span className='text-[18px] sct5-span font-semibold font-[Rajdhani] text-[white]'>AWARDS</span>
           </div>
         </div>
 
@@ -70,8 +70,8 @@ const Section5 = () => {
             <BsShopWindow className='text-[50px] text-[white]' />
           </div>
           <div className="sct5-info flex flex-col items-center">
-            {inView && <CountUp start={0} end={526} duration={2.5} className='block font-[Rajdhani] text-[48px] h-[60px] text-[white] font-bold' />}
-            <span className='text-[18px] font-semibold font-[Rajdhani] text-[white]'>BRANCHES IN THE COUNTRY</span>
+            {inView && <CountUp start={0} end={526} duration={2.5} className='block sct5-count font-[Rajdhani] text-[48px] h-[60px] text-[white] font-bold' />}
+            <span className='text-[18px] sct5-span font-semibold font-[Rajdhani] text-[white]'>BRANCHES IN THE COUNTRY</span>
           </div>
         </div>
       </div>

@@ -19,10 +19,10 @@ const Section3 = () => {
           clickable: true,
         }}
         modules={[Pagination]}
-        className="mySwiper w-full h-[411px]"
+        className="mySwiper sct3-swiper w-full sct3-slide h-[411px]"
       >
-        <SwiperSlide className="flex justify-between items-center">
-            <img  src="https://livedemo00.template-help.com/wt_prod-25548/unit-car-repair/images/services-4-250x362.png" alt="" />
+        <SwiperSlide className="sct3-slide flex sct3-swiper justify-between items-center">
+            <img className="sct3-img" src="https://livedemo00.template-help.com/wt_prod-25548/unit-car-repair/images/services-4-250x362.png" alt="" />
             <div className="sct3-text w-[236px] h-[186px]  flex flex-col justify-around">
                 <h3 className="sct3-h3">WHEEL CHANGE</h3>
                 <div className="icon-sct3">
@@ -31,8 +31,8 @@ const Section3 = () => {
             </div>
             </SwiperSlide>
 
-        <SwiperSlide className="flex justify-between items-center">
-            <img src="https://livedemo00.template-help.com/wt_prod-25548/unit-car-repair/images/services-1-250x362.png" alt="" />
+        <SwiperSlide className="sct3-slide flex justify-between items-center">
+            <img className="sct3-img" src="https://livedemo00.template-help.com/wt_prod-25548/unit-car-repair/images/services-1-250x362.png" alt="" />
             <div className="sct3-text w-[236px] h-[186px]  flex flex-col justify-around">
                 <h3 className="sct3-h3">OIL CHANGE</h3>
                 <div className="icon-sct3">
@@ -41,18 +41,18 @@ const Section3 = () => {
             </div>
             </SwiperSlide>
 
-        <SwiperSlide className="flex justify-between items-center">
-            <img src="https://livedemo00.template-help.com/wt_prod-25548/unit-car-repair/images/services-2-250x362.png" alt="" />
+        <SwiperSlide className="sct3-slide flex justify-between items-center">
+            <img className="sct3-img" src="https://livedemo00.template-help.com/wt_prod-25548/unit-car-repair/images/services-2-250x362.png" alt="" />
             <div className="sct3-text w-[236px] h-[186px]  flex flex-col justify-around">
-                <h3 className="sct3-h3">REPAIR ENGINE</h3>
+                <h3 className="sct3-h3 ">REPAIR ENGINE</h3>
                 <div className="icon-sct3">
                 <FaArrowRight />
                 </div>
             </div>
             </SwiperSlide>
 
-        <SwiperSlide className="flex justify-between items-center">
-            <img src="https://livedemo00.template-help.com/wt_prod-25548/unit-car-repair/images/services-3-250x362.png" alt="" />
+        <SwiperSlide className="sct3-slide flex justify-between items-center">
+            <img className="sct3-img" src="https://livedemo00.template-help.com/wt_prod-25548/unit-car-repair/images/services-3-250x362.png" alt="" />
             <div className="sct3-text w-[236px] h-[186px]  flex flex-col justify-around">
                 <h3 className="sct3-h3">BRAKE REPAIR</h3>
                 <div className="icon-sct3">

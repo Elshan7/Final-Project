@@ -24,7 +24,9 @@ const Favorite = () => {
             </div>
 
             <div className="title  w-full flex justify-center items-center ">
-            <h1 className='text-3xl rounded py-2 bg-transparent w-[20%]  font-bold tracking-wider text-center my-5 cursor-pointer duration-700 hover:text-gray-900 hover:bg-slate-400 '>FAVORITE LIST</h1>
+            <h1 className='text-3xl rounded py-2 bg-transparent w-[40%]  font-bold tracking-wider text-center my-5 cursor-pointer duration-700 hover:text-gray-900 hover:bg-slate-400 '>
+                FAVORITE LIST
+            </h1>
             </div>
 
            <section className='fav-sct  h-auto flex justify-center items-center m-4 '>
