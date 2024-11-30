@@ -34,7 +34,7 @@ const Section2 = () => {
 
   return (
     <section id="sct2" data-aos-duration="3000" data-aos="zoom-in" className="sct2 w-full h-[665px] flex justify-center items-end">
-      <div className="sct2-container w-[80%] h-[545px]  flex justify-end ">
+      <div  className="sct2-container w-[80%] h-[545px]  flex justify-end ">
         <div className="sct2-rightcontainer w-[50%] h-[545px] ">
           <h2 className=' sct2-h2 text-[#151515] font-bold  font-["Montserrat"] mb-3 ml-5'>
             WHY CHOOSE US
