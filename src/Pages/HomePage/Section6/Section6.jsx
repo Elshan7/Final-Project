@@ -20,16 +20,16 @@ const Section6 = () => {
   return (
     <section
       id="sct6"
-      className="sct6 w-full h-[840px] flex justify-center items-center"
+      className="sct6 w-full h-[840px] flex justify-center items-center overflow-hidden"
     >
-      <div  data-aos-duration="1500" className="sct6-container w-[80%] h-[635px]  flex flex-col justify-between items-center">
+      <div   className="sct6-container w-[80%] h-[635px]  flex flex-col justify-between items-center">
         <h2  className="w-full h-[55px] sct6-h2 text-[45px] font-[Montserrat] font-bold  text-center">
           OUR TEAM
         </h2>
 
-        <div className="sct6-content w-full h-[520px]  flex flex-wrap justify-between items-center">
+        <div className="sct6-content w-full h-[520px]  flex flex-wrap justify-between items-center overflow-hidden">
 
-          <div data-aos-duration="2000" data-aos="fade-right" className="box-content w-[370px] h-[526px]  flex flex-col justify-between items-center">
+          <div data-aos-duration="1500" data-aos="fade-right" className="box-content w-[370px] h-[526px]  flex flex-col justify-between items-center">
             <div className="  box-img w-[370px] h-[334px] bg-[#FFFFFF]">
               <img
                 className="object-cover hover:scale-105 duration-500 "
@@ -55,7 +55,7 @@ const Section6 = () => {
             </div>
           </div>
 
-          <div data-aos-duration="2000" data-aos="zoom-out-down"  className="box-content w-[370px] h-[526px]  flex flex-col justify-between items-center">
+          <div data-aos-duration="1500" data-aos="zoom-out-down"  className="box-content w-[370px] h-[526px]  flex flex-col justify-between items-center">
             <div className="  box-img w-[370px] h-[334px] bg-[#FFFFFF]">
               <img
                 className="object-cover hover:scale-105 duration-500 "
@@ -80,7 +80,7 @@ const Section6 = () => {
             </div>
           </div>
 
-          <div data-aos-duration="2000" data-aos="fade-left" className="box-content w-[370px] h-[526px]  flex flex-col justify-between items-center">
+          <div data-aos-duration="1500" data-aos="fade-left" className="box-content w-[370px] h-[526px]  flex flex-col justify-between items-center">
             <div className="  box-img w-[370px] h-[334px] bg-[#FFFFFF]">
               <img
                 className="object-cover hover:scale-105 duration-500 "

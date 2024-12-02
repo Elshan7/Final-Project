@@ -12,7 +12,7 @@ const Section1 = () => {
   return (
     <section className="sct1 flex justify-center items-center">
       <div className="container-sct1 w-[80%] h-80 absolute z-10 flex justify-end">
-        <div className="left-content w-[44%] h-80 flex flex-col justify-evenly items-end">
+        <div className="left-content w-[44%] h-80 flex flex-col justify-evenly items-end overflow-hidden">
           <p
             data-aos-duration="1500"
             data-aos="fade-down-right"

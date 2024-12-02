@@ -10,8 +10,9 @@ import { FaSkype } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="w-full h-[540px] bg-[#343434]">
+
       <div className="footer-up w-full h-[402px] flex justify-center items-center">
-        <div className="footer-up-container w-[80%] h-[273px] flex ">
+        <div className="footer-up-container w-[80%] h-[273px] flex overflow-hidden ">
           <div data-aos="zoom-in-down" className="footer-part1 w-[33.3%] h-[273px] ">
             <h5 className="footer-h5 font-[Montserrat] text-[20px] text-[#FFF] duration-700 cursor-pointer tracking-wide font-bold hover:text-blue-600 hover:ml-2">
               OUR CONTACTS

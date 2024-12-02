@@ -20,7 +20,7 @@ const Section4 = () => {
   return (
     <section  className=" sct4 w-full h-auto bg-[#F2F2F2] flex justify-center items-center  mt-8">
 
-      <div className="sct4-content w-[90%] h-auto my-4 flex flex-col justify-start items-center  ">
+      <div className="sct4-content w-[90%] h-auto my-4 flex flex-col justify-start items-center overflow-hidden  ">
 
         <div className="sct4-title w-full my-2">
           <h2 className="sct4-h2">POPULAR PRODUCTS</h2>

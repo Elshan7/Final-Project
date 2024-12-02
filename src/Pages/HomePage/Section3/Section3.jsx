@@ -12,17 +12,17 @@ const Section3 = () => {
 
         <h2 className="sct3-h2 font-[Montserrat] text-[40px] font-bold mt-4  ">OUR SERVICES</h2>
 
-<Swiper 
+     <Swiper 
         slidesPerView={3}
         spaceBetween={0}
         pagination={{
           clickable: true,
         }}
         modules={[Pagination]}
-        data-aos-duration="2000" data-aos="flip-left"
-        className="mySwiper sct3-swiper w-full sct3-slide h-[411px]"
+        
+        className="mySwiper sct3-swiper w-full sct3-slide h-[411px] overflow-hidden"
       >
-        <SwiperSlide className="sct3-slide flex sct3-swiper justify-between items-center">
+        <SwiperSlide data-aos-duration="2000" data-aos="flip-left" className="sct3-slide flex sct3-swiper justify-between items-center">
             <img className="sct3-img" src="https://livedemo00.template-help.com/wt_prod-25548/unit-car-repair/images/services-4-250x362.png" alt="" />
             <div className="sct3-text w-[236px] h-[186px]  flex flex-col justify-around">
                 <h3 className="sct3-h3">WHEEL CHANGE</h3>
@@ -32,7 +32,7 @@ const Section3 = () => {
             </div>
             </SwiperSlide>
 
-        <SwiperSlide className="sct3-slide flex justify-between items-center">
+        <SwiperSlide data-aos-duration="2000" data-aos="flip-left" className="sct3-slide flex justify-between items-center">
             <img className="sct3-img" src="https://livedemo00.template-help.com/wt_prod-25548/unit-car-repair/images/services-1-250x362.png" alt="" />
             <div className="sct3-text w-[236px] h-[186px]  flex flex-col justify-around">
                 <h3 className="sct3-h3">OIL CHANGE</h3>
@@ -42,7 +42,7 @@ const Section3 = () => {
             </div>
             </SwiperSlide>
 
-        <SwiperSlide className="sct3-slide flex justify-between items-center">
+        <SwiperSlide data-aos-duration="2000" data-aos="flip-left" className="sct3-slide flex justify-between items-center">
             <img className="sct3-img" src="https://livedemo00.template-help.com/wt_prod-25548/unit-car-repair/images/services-2-250x362.png" alt="" />
             <div className="sct3-text w-[236px] h-[186px]  flex flex-col justify-around">
                 <h3 className="sct3-h3 ">REPAIR ENGINE</h3>
@@ -52,7 +52,7 @@ const Section3 = () => {
             </div>
             </SwiperSlide>
 
-        <SwiperSlide className="sct3-slide flex justify-between items-center">
+        <SwiperSlide data-aos-duration="2000" data-aos="flip-left" className="sct3-slide flex justify-between items-center">
             <img className="sct3-img" src="https://livedemo00.template-help.com/wt_prod-25548/unit-car-repair/images/services-3-250x362.png" alt="" />
             <div className="sct3-text w-[236px] h-[186px]  flex flex-col justify-around">
                 <h3 className="sct3-h3">BRAKE REPAIR</h3>

@@ -4,7 +4,7 @@ import './section7.css';
 const Section7 = () => {
   return (
     <section className='sct7 bg-[#f7f7f7] w-full h-64 flex justify-center items-center'>
-        <div className="sct7-container w-[80%] h-20  flex ">
+        <div className="sct7-container w-[80%] h-20  flex overflow-hidden ">
             <div data-aos-duration="1000" data-aos="fade-right" className="sct7-part1 w-[25%] h-20 flex justify-center items-center ">
                 <img className='object-cover' src="https://livedemo00.template-help.com/wt_prod-25548/unit-car-repair/images/clients-1-111x47.png" alt="" />
             </div>
