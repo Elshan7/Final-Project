@@ -56,9 +56,22 @@ export const deleteUser = createAsyncThunk(
   async (userId, { rejectWithValue }) => {
     try {
       await axios.delete(`https://66ffcd724da5bd237552095c.mockapi.io/user/${userId}`);
-      return userId; 
+      return userId;
     } catch (error) {
       return rejectWithValue(error.message || 'Failed to delete user');
+    }
+  }
+);
+
+
+export const addUser = createAsyncThunk(
+  'login/addUser',
+  async (newUser, { rejectWithValue }) => {
+    try {
+      const { data } = await axios.post('https://66ffcd724da5bd237552095c.mockapi.io/user', newUser);
+      return data; 
+    } catch (error) {
+      return rejectWithValue(error.message || 'Failed to add user');
     }
   }
 );
@@ -88,7 +101,6 @@ const loginSlice = createSlice({
         state.error = action.payload;
       })
 
-   
       .addCase(fetchUsers.pending, (state) => {
         state.loading = true;
         state.error = null;
@@ -102,7 +114,7 @@ const loginSlice = createSlice({
         state.error = action.payload;
       })
 
-   
+      
       .addCase(updateUser.fulfilled, (state, action) => {
         const index = state.usersList.findIndex(user => user.id === action.payload.id);
         if (index !== -1) {
@@ -117,10 +129,23 @@ const loginSlice = createSlice({
       })
       .addCase(deleteUser.fulfilled, (state, action) => {
         state.loading = false;
-       
         state.usersList = state.usersList.filter(user => user.id !== action.payload);
       })
       .addCase(deleteUser.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      })
+
+    
+      .addCase(addUser.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(addUser.fulfilled, (state, action) => {
+        state.loading = false;
+        state.usersList.push(action.payload); 
+      })
+      .addCase(addUser.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
       });
@@ -128,9 +153,5 @@ const loginSlice = createSlice({
 });
 
 export default loginSlice.reducer;
-
-
-
-
 
 

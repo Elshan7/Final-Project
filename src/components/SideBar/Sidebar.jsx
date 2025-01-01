@@ -9,7 +9,11 @@ const Sidebar = ({ onMenuClick }) => {
   const handleMouseLeave = () => setIsExpanded(false);
 
   const handleMenuClick = (page) => {
-    onMenuClick(page);
+    if (typeof onMenuClick === "function") {
+      onMenuClick(page);
+    } else {
+      console.error("onMenuClick prop is not a function");
+    }
   };
 
   return (
@@ -51,56 +55,3 @@ export default Sidebar;
 
 
 
-
-
-
-
-
-// import  { useState } from "react";
-// import { FaHome, FaLayerGroup, FaChartBar, FaFilm, FaUsers } from "react-icons/fa";
-// import "./sidebar.css"; 
-
-// const Sidebar = () => {
-//   const [isExpanded, setIsExpanded] = useState(true);
-
-//   const handleMouseEnter = () => {
-//     setIsExpanded(true);
-//   };
-
-//   const handleMouseLeave = () => {
-//     setIsExpanded(false);
-//   };
-
-//   return (
-//     <div
-//       className={` sidebar ${isExpanded ? "expanded" : "collapsed"}`}
-//       onMouseEnter={handleMouseEnter}
-//       onMouseLeave={handleMouseLeave}
-//     >
-//       <ul className="sidebar-menu">
-//         <li>
-//           <FaHome className="icon" />
-//           {isExpanded && <span>Dashboard</span>}
-//         </li>
-//         <li>
-//           <FaLayerGroup className="icon" />
-//           {isExpanded && <span>All Products</span>}
-//         </li>
-//         <li>
-//           <FaChartBar className="icon" />
-//           {isExpanded && <span>Trending</span>}
-//         </li>
-//         <li>
-//           <FaFilm className="icon" />
-//           {isExpanded && <span>Movies</span>}
-//         </li>
-//         <li>
-//           <FaUsers className="icon" />
-//           {isExpanded && <span>Users</span>}
-//         </li>
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default Sidebar;
