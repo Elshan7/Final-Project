@@ -207,6 +207,7 @@ footer .part3-text {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
+        background-color: #343434;
     }
 
     .footer-up-container {
